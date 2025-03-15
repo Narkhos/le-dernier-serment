@@ -1,5 +1,5 @@
-#ifndef __LANGUAGE_FR_H__
-#define __LANGUAGE_FR_H__
+#ifndef __LANGUAGE_EN_H__
+#define __LANGUAGE_EN_H__
 
 // BEHAVIOR
 #define _T0001 "Vous ouvrez le coffre avec la clef"
