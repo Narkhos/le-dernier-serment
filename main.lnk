@@ -1,0 +1,17 @@
+-mjx
+-i main.ihx
+-b _CODE = 0x0138
+-b _DATA = 0x0000
+-k C:\tests\fictions interactives\concours-2024\amstrad-version\SDCC3\bin\..\lib\z80
+-l z80
+main.rel
+crt0_cpc.rel
+lib.rel
+putchar_cpc.rel
+getchar_cpc.rel
+game.rel
+parser.rel
+objects.rel
+sound.rel
+
+-e

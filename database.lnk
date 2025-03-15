@@ -1,0 +1,9 @@
+-mjx
+-i database.ihx
+-b _CODE = 0x0138
+-b _DATA = 0x0000
+-k C:\tests\fictions interactives\concours-2024\amstrad-version\SDCC3\bin\..\lib\z80
+-l z80
+database.rel
+
+-e

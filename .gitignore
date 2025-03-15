@@ -1,0 +1,8 @@
+SDCC36
+convImgCpc
+*.dsk
+!cat.dsk
+*.BAK
+*.exe
+*.rel
+*.sym
