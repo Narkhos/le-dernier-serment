@@ -6,3 +6,4 @@ convImgCpc
 *.exe
 *.rel
 *.sym
+database.c

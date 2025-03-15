@@ -8,11 +8,11 @@ if "%~1"=="" (
 
 if "%~1"=="fr" (
     set language=1
-    xcopy /f /y database_fr.c database.c
+    copy database_fr.c database.c
 ) else (
     if "%~1"=="en" (
         set language=2
-        xcopy /f /y database_en.c database.c
+        copy database_en.c database.c
     ) else (
         echo Langue inconnue on passe en anglais
         set language=2
