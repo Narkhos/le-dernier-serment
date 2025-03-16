@@ -1,12 +1,12 @@
 #include "database.h"
 
-// On n'utilise pas la syntaxe .name = {""} dans l'initalisation des tableaux de structure
-// car cette syntaxe n'est pas connue de certains compilateurs comme SDCC
+// We don't use the .name = {""} syntax in structure array initialization
+// because some compilers like SDCC do not recognize this syntax.
 struct Object objectDatabase[MAX_OBJECT_COUNT] = {
-    // Système
+    // System
     { // NO_OBJECT
         {"EMPTY"},
-        "rien",
+        "nothing",
         NO_OBJECT,
         NO_OBJECT,
         "",
@@ -14,398 +14,397 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
     },
     { // CONTEXT
         {"CONTEXT"},
-        "contexte",
+        "context",
         CONTEXT,
         NO_OBJECT,
         "",
         0
     },
-    // Protagoniste
+    // Protagonist
     { // HERO
-        // Liste des mots pouvant désigner le joueur en tant qu'objet d'une commande (avant ou après le verbe)
-        {"ME", "SE", "M", "SOI", "MOI"},
-        "vous",
+        {"ME", "SELF", "M", "ONESSELF", "MYSELF"},
+        "you",
         HERO,
         CONTEXT,
-        "C'est bien vous",
+        "It's you",
         0
     },
     { // INVENTORY
-        {"SAC"},
-        "votre sac",
+        {"BAG"},
+        "your bag",
         INVENTORY,
         CONTEXT,
         "Inventory:",
         0
     },
-    // Personnages
+    // Characters
     { // HERMIT
-        {"MOINE", "HOMME", "POCHE", "HERMES"},
-        "le moine",
+        {"MONK", "MAN", "POCKET", "HERMES"},
+        "the monk",
         HERMIT,
         M_HUT_INDOOR,
-        "Un vieux moine",
+        "An old monk",
         0b00000000
     },
     { // NAHASH
-        {"NAHASH", "ANGE"},
+        {"NAHASH", "ANGEL"},
         "Nahash",
         NAHASH,
         NO_OBJECT,
-        "Un ange passe",
+        "An angel passes by",
         0
     },
     { // GOD
-        {"CREATEUR","SPHERE","DIEU", "BOULE"},
-        "le créateur",
+        {"CREATOR","SPHERE","GOD", "BALL"},
+        "the creator",
         GOD,
         GOD_ROOM,
-        "Le dieu créateur",
+        "The creator god",
         0
     },
-    // Objets
+    // Objects
     { // FLUTE (BAS-RELIEF)
         {"FLUTE"},
-        "la flute",
+        "the flute",
         FLUTE,
         BASRELIEF,
-        "La flute et la musicienne sont sculptées d'un seul tenant",
+        "The flute and the musician are sculpted as one piece",
         0
     },
     { // FLUTE (BAS-RELIEF)
         {"FLUTE"},
-        "la flute",
+        "the flute",
         M_FLUTE,
         M_BASRELIEF,
-        "La flute et la musicienne sont sculptées d'un seul tenant",
+        "The flute and the musician are sculpted as one piece",
         0
     },
     { // STOVE
-        {"POELE", "FOUR", "FEU"},
-        "le poêle",
+        {"STOVE", "OVEN", "FIRE"},
+        "the stove",
         STOVE,
         LABORATORY,
-        "Un vieux poêle",
+        "An old stove",
         0
     },
     { // M_BUTTON
-        {"BOUTON", "LEVIER"},
-        "le bouton",
+        {"BUTTON", "LEVER"},
+        "the button",
         M_BUTTON,
         M_LABORATORY,
-        "Un petit levier rouillé",
+        "A small rusty lever",
         0
     },
     { // IVY
-        {"LIERRE"},
-        "le lierre",
+        {"IVY"},
+        "the ivy",
         IVY,
         CAVERN_OUTDOOR,
-        "Le lierre monte jusqu'à une ouverture",
+        "The ivy climbs up to an opening",
         0
     },
     { // LADDER
-        {"ECHELLE"},
-        "l'échelle",
+        {"LADDER"},
+        "the ladder",
         LADDER,
         M_FOREST,
-        "L'échelle disparaît dans le feuillage   des arbres",
+        "The ladder disappears into the foliage of the trees",
         0
     },
     { // TOWER
-        {"TOUR","RUINE","CHATEAU"},
-        "la tour",
+        {"TOWER","RUIN","CASTLE"},
+        "the tower",
         TOWER,
         CAVERN_OUTDOOR,
-        "Une tour en ruine envahie par le lierre",
+        "A ruined tower overgrown with ivy",
         0
     },
     { // M_TOWER
-        {"TOUR","RUINE","CHATEAU"},
-        "la tour",
+        {"TOWER","RUIN","CASTLE"},
+        "the tower",
         M_TOWER,
         M_CAVERN_OUTDOOR,
-        "Une tour en ruine",
+        "A ruined tower",
         0
     },
     { // HUT
-        {"CABANE","MAISON","CHALET"},
-        "la cabane",
+        {"HUT","HOUSE","CABIN"},
+        "the hut",
         HUT,
         HUT_OUTDOOR,
-        "Une cabane dans les arbres",
+        "A treehouse",
         0
     },
     { // M_HUT
-        {"CABANE","MAISON","CHALET"},
-        "la cabane",
+        {"HUT","HOUSE","CABIN"},
+        "the hut",
         M_HUT,
         M_HUT_OUTDOOR,
-        "Une cabane dans les arbres",
+        "A treehouse",
         0
     },
     { // BASRELIEF
         {"BAS-RELIEF", "BASRELIEF"},
-        "le bas-relief",
+        "the bas-relief",
         BASRELIEF,
         SECRET_ROOM,
-        "Un bas-relief montrant une musicienne",
+        "A bas-relief showing a musician",
         0b00001000
     },
     { // M_BASRELIEF
         {"BAS-RELIEF", "BASRELIEF"},
-        "le bas-relief",
+        "the bas-relief",
         M_BASRELIEF,
         M_SECRET_ROOM,
-        "Un bas-relief montrant une musicienne",
+        "A bas-relief showing a musician",
         0b00001000
     },
     { // BUSH
-        {"BUISSON","PLANTE","ARBRE","BUISSONS"},
-        "le buisson",
+        {"BUSH", "PLANT", "TREE", "BUSHES"},
+        "the bush",
         BUSH,
         CAVERN_OUTDOOR,
-        "Un buisson plein de baies",
+        "A bush full of berries",
         0b00001000
     },
     { // AMULET
-        {"AMULETTE","BIJOU", "PENDANTIF", "TALISMAN"},
-        "l'amulette",
+        {"AMULET", "JEWELRY", "PENDANT", "TALISMAN"},
+        "the amulet",
         AMULET,
         HERMIT,
-        "Un pendentif",
+        "A pendant",
         4 // 0b00000100
     },
     { // BERRY
-        {"BAIES","FRUITS","BAIE"},
-        "les baies",
+        {"BERRIES","FRUITS","BERRY"},
+        "the berries",
         BERRY,
         BUSH,
-        "De baies rouges",
+        "Red berries",
         4 // 0b00000100
     },
-    { // TRAPPE
-        {"TRAPPE","ESCALIER"},
-        "la trappe",
+    { // TRAPDOOR
+        {"TRAPDOOR","STAIRCASE"},
+        "the trapdoor",
         TRAPPE,
         CHURCH_INDOOR,
-        "Une trappe",
+        "A trapdoor",
         1 // 0b00000001, MASK_CLOSED
     },
-    { // M_TRAPPE
-        {"TRAPPE","ESCALIER"},
-        "la trappe",
+    { // M_TRAP
+        {"TRAPDOOR", "STAIRS"},
+        "the trapdoor",
         M_TRAPPE,
         M_CHURCH_INDOOR,
-        "Une trappe",
+        "A trapdoor",
         0
     },
     { // BUTTON
-        {"BOUTON", "LEVIER"},
-        "le bouton",
+        {"BUTTON", "LEVER"},
+        "the button",
         BUTTON,
         LABORATORY,
-        "Un petit levier",
+        "A small lever",
         1 // 0b00000001, MASK_CLOSED
     },
     { // BOOK
-        {"LIVRE", "GRIMOIRE", "BOUQUIN"},
-        "le grimoire",
+        {"BOOK", "GRIMOIRE"},
+        "the grimoire",
         BOOK,
         LABORATORY,
-        "Un vieux grimoire",
+        "An old grimoire",
         4 // 0b00000100
     },
     { // MINT
-        {"MENTHE", "MENTE"},
-        "la menthe",
+        {"MINT", "MENTE"},
+        "the mint",
         MINT,
         HERMIT,
-        "De la menthe",
+        "Some mint",
         4 // 0b00000100
     },
     { // TIBIA
         {"TIBIA"},
-        "le tibia",
+        "the tibia",
         TIBIA,
         BONES,
-        "Il ressemble à une cuillère",
+        "It looks like a spoon",
         4 // 0b00000100
     },
     { // FLASK
-        {"FIOLE", "FLASQUE", "POTION"},
-        "la fiole",
+        {"FLASK", "VIAL", "POTION"},
+        "the flask",
         FLASK,
         BONES,
-        "Une petite fiole",
+        "A small flask",
         4 // 0b00000100
     },
     { // MUSHROOMS
-        {"AMANITES", "AMANITE", "CHAMPIGNON"},
-        "les amanites",
+        {"AMANITAS", "AMANITA", "MUSHROOM"},
+        "the amanitas",
         MUSHROOMS,
         M_CAULDRON,
-        "De petits champignons blancs",
+        "Small white mushrooms",
         4 // 0b00000100
     },
     { // BONES
-        {"SQUELETTE","OS","OSSEMENTS","CRANE"},
-        "le squelette",
+        {"SKELETON", "BONE", "BONES", "SKULL"},
+        "the skeleton",
         BONES,
         MIRROR_ROOM,
-        "Des ossements humains",
+        "Human bones",
         0b00001000
     },
     { // SALT
-        {"SEL", "SALIERE"},
-        "le sel",
+        {"SALT", "SALT SHAKER"},
+        "the salt",
         SALT,
         BONES,
-        "Du sel",
+        "Some salt",
         4
     },
     { // PEPPER
-        {"POIVRE"},
-        "le poivre",
+        {"PEPPER"},
+        "the pepper",
         PEPPER,
         BONES,
-        "Du poivre",
+        "Some pepper",
         4
     },
     { // ARTEFACT
-        {"SCEPTRE", "BATON", "SEPTRE", "FLUTE"},
-        "le sceptre",
+        {"SCEPTER", "STAFF", "SEPTRE", "FLUTE"},
+        "the scepter",
         ARTEFACT,
         CHEST,
-        "Un bâton percé de trous avec une boule  au bout",
+        "A staff with holes and a ball at the end",
         0b00000100
     },
     { // GONG
-        {"GONG","CYMBALE","DISQUE"},
-        "le gong",
+        {"GONG", "CYMBAL", "DISC"},
+        "the gong",
         GONG,
         M_CHURCH_INDOOR,
-        "C'est un gong",
+        "It's a gong",
         0
     },
     { // CAULDRON
-        {"CHAUDRON", "MARMITE", "SUBSTRAT","EAU"},
-        "le chaudron",
+        {"CAULDRON", "POT", "SUBSTRATE", "WATER"},
+        "the cauldron",
         CAULDRON,
         LABORATORY,
-        "Un petit chaudron",
+        "A small cauldron",
         0
     },
     { // M_CAULDRON
-        {"CHAUDRON", "MARMITE"},
-        "le chaudron",
+        {"CAULDRON", "POT"},
+        "the cauldron",
         M_CAULDRON,
         M_LABORATORY,
-        "Un chaudron usé par le temps",
+        "A cauldron worn by time",
         0
     },
     { // STATUETTE
-        {"STATUETTE","STATUE","TROU","SOCLE"},
-        "la statuette",
+        {"STATUETTE", "STATUE", "HOLE", "BASE"},
+        "the statuette",
         STATUETTE,
         CRYPT,
-        "Une statue fixée à un socle percé\r\nd'un petit trou",
+        "A statue fixed to a base with a small hole",
         128 // 0b10000000 // MASK_CUSTOM_STATE
     },
     { // M_STATUETTE
-        {"STATUETTE","STATUE","TROU","SOCLE"},
-        "la statuette",
+        {"STATUETTE", "STATUE", "HOLE", "BASE"},
+        "the statuette",
         M_STATUETTE,
         M_CRYPT,
-        "Une statue fixée à un socle percé d'un petit trou",
+        "A statue fixed to a base with a small hole",
         0
     },
     { // WHISTLE
-        {"SIFFLET"},
-        "le sifflet",
+        {"WHISTLE"},
+        "the whistle",
         WHISTLE,
         BASRELIEF,
-        "Un sifflet",
+        "A whistle",
         4 // 0b00000100
     },
     { // PARTITION
-        {"PARTITION", "PAPIER", "FEUILLE"},
-        "la partition",
+        {"SCORE", "PAPER", "SHEET"},
+        "the score",
         PARTITION,
         M_BASRELIEF,
-        "Une partition musicale",
+        "A musical score",
         4 // 0b00000100
     },
     { // DOOR
-        {"PORTE"},
-        "la porte",
+        {"DOOR"},
+        "the door",
         DOOR,
         CRYPT,
-        "Elle n'a ni serrure ni poignée",
+        "It has neither a lock nor a handle",
         1 // 0b00000001, MASK_CLOSED
     },
     { // M_DOOR
-        {"PORTE"},
-        "la porte",
+        {"DOOR"},
+        "the door",
         M_DOOR,
         M_CRYPT,
-        "Elle n'a ni serrure ni poignée",
+        "It has neither a lock nor a handle",
         1 // 0b00000001, MASK_CLOSED
     },
     { // CHURCH
-        {"CHAPELLE", "RUINE", "EGLISE"},
-        "la chapelle",
+        {"CHAPEL", "RUIN", "CHURCH"},
+        "the chapel",
         CHURCH,
         CHURCH_OUTDOOR,
-        "Un bâtiment délabré",
+        "A dilapidated building",
         0
     },
     { // CHEST
-        {"COFFRE", "BOITE"},
-        "le coffre",
+        {"CHEST", "BOX"},
+        "the chest",
         CHEST,
         CAVERN_INDOOR,
-        "Un coffre en bois",
+        "A wooden chest",
         0b01001011
     },
     { // M_CHEST
         {"COFFRE", "BOITE"},
-        "le coffre",
+        "the chest",
         M_CHEST,
         M_CAVERN_INDOOR,
-        "Un coffre en bois",
+        "A wooden chest",
         0b01001011
     },
     { // KEY
-        {"CLEF", "CLE"},
-        "la clef",
+        {"KEY"},
+        "the key",
         KEY,
         HERMIT,
-        "Une petite clef",
+        "A small key",
         4 // 0b00000100
     },
     { // FIREBRAND
-        {"TISONNIER", "PIQUE"},
-        "le tisonnier",
+        {"POKER", "PIKE"},
+        "the firebrand",
         FIREBRAND,
         M_CHEST,
-        "Une fine barre de métal pointue",
+        "A thin pointed metal rod",
         4 // 0b00000100
     },
     { // MIRROR
-        {"MIROIR", "GLACE", "REFLET", "MIRROIR"},
-        "le miroir",
+        {"MIRROR", "GLASS", "REFLECTION"},
+        "the mirror",
         MIRROR,
         MIRROR_ROOM,
-        "Un grand miroir",
+        "A large mirror",
         0
     },
     { // M_MIRROR
-        {"MIROIR", "GLACE", "REFLET", "MIRROIR"},
-        "le miroir",
+        {"MIRROR", "GLASS", "REFLECTION"},
+        "the mirror",
         M_MIRROR,
         M_MIRROR_ROOM,
-        "Un grand miroir",
+        "A large mirror",
         0
     },
     // Simulation locations
@@ -414,7 +413,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         NW_ROOM,
         NO_OBJECT,
-        "Une salle avec un coffre à OUVRIR",
+        "A room with a chest to OPEN",
         0
     },
     { // N_ROOM
@@ -422,7 +421,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         N_ROOM,
         NO_OBJECT,
-        "PARLER au garde",
+        "TALK to the guard",
         0
     },
     { // NE_ROOM
@@ -430,7 +429,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         NE_ROOM,
         NO_OBJECT,
-        "PRENDRE la clef semble être une bonne\r\nidée",
+        "TAKE the key seems like a good idea",
         0
     },
     { // W_ROOM
@@ -438,7 +437,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         W_ROOM,
         NO_OBJECT,
-        "Pensez à consulter votre INVENTAIRE",
+        "Remember to check your INVENTORY",
         0
     },
     { // CENTER_ROOM
@@ -446,8 +445,8 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         CENTER_ROOM,
         NO_OBJECT,
-        "Une salle vide",
-      //"aaaaaaaabbbbbbbbccccccccddddddddaaaaaaaabbbbbbbbccccccccdddddddd"
+        "An empty room",
+        //"aaaaaaaabbbbbbbbccccccccddddddddaaaaaaaabbbbbbbbccccccccdddddddd"
         0
     },
     { // E_ROOM
@@ -455,7 +454,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         E_ROOM,
         NO_OBJECT,
-        "Vous pouvez OUVRIR la porte",
+        "You can OPEN the door",
         0
     },
     { // SW_ROOM
@@ -463,7 +462,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         SW_ROOM,
         NO_OBJECT,
-        "Une salle vide",
+        "An empty room",
         0
     },
     { // S_ROOM
@@ -471,7 +470,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         S_ROOM,
         NO_OBJECT,
-        "Tapez NORD,SUD,EST ou OUEST pour vous\r\ndéplacer",
+        "Type NORTH,SOUTH,EAST or WEST to move",
         0
     },
     { // SE_ROOM
@@ -479,113 +478,113 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         SE_ROOM,
         NO_OBJECT,
-        "Une salle vide",
+        "An empty room",
         0
     },
     // Simulation objects
     { // SIM_CLUB
-        {"MASSUE", "MASSE"},
-        "la massue",
+        {"CLUB", "MACE"},
+        "the club",
         SIM_CLUB,
         SIM_CHEST,
-        "Une arme pesante",
+        "A heavy weapon",
         4
     },
     { // SIM_GUARD
-        {"GARDE", "SOLDAT", "HOMME"},
-        "le garde",
+        {"GUARD", "SOLDIER", "MAN"},
+        "the guard",
         SIM_GUARD,
         N_ROOM,
-        "Il n'a pas l'air commode",
+        "He doesn't look friendly",
         0
     },
     { // SIM_CHEST
-        {"COFFRE","BOITE","MALLE"},
-        "le coffre",
+        {"CHEST", "BOX", "TRUNK"},
+        "the chest",
         SIM_CHEST,
         NW_ROOM,
-        "Un gros coffre",
+        "A big chest",
         0b01001011
     },
     { // SIM_KEY
-        {"CLE", "CLEF"},
-        "la clef",
+        {"KEY"},
+        "the key",
         SIM_KEY,
         NE_ROOM,
-        "Une clé à UTILISER sur un COFFRE",
+        "A key to USE on a CHEST",
         4 // 0b00000100
     },
     { // SIM_DOOR
-        {"PORTE"},
-        "la porte",
+        {"DOOR"},
+        "the door",
         SIM_DOOR,
         E_ROOM,
-        "Une porte",
+        "A door",
         0b01000001
     },
-    // Lieux
+    // Locations
     { // GOD_ROOM
         {"GODROOM"},
         "",
         GOD_ROOM,
         NO_OBJECT,
-        "Une grande sphère flotte au milieu d'un étrange paysage",
+        "A large sphere floats in the middle of a strange landscape",
         0
     },
     { // FOREST
-        {"FORET"},
+        {"FOREST"},
         "",
         FOREST,
         NO_OBJECT,
-        "Des arbres,encore des arbres",
+        "Trees,more trees",
         0
     },
     { // M_FOREST
-        {"MFORET"},
+        {"MFOREST"},
         "",
         M_FOREST,
         NO_OBJECT,
-        "Des arbres,encore des arbres.Et une   échelle!",
+        "Trees,more trees.And a ladder!",
         0
     },
     { // CHURCH_OUTDOOR
-        {"EXT"},
+        {"OUTSIDE"},
         "",
         CHURCH_OUTDOOR,
         NO_OBJECT,
-        "Une clairière.En haut d'une colline,  une chapelle abandonnée",
+        "A clearing.On top of a hill,an abandoned chapel",
         0
     },
     { // M_CHURCH_OUTDOOR
-        {"MEXT"},
+        {"MOUTSIDE"},
         "",
         M_CHURCH_OUTDOOR,
         NO_OBJECT,
-        "Une clairière.En haut d'une colline,  une chapelle abandonnée",
+        "A clearing.On top of a hill,an abandoned chapel",
         0
     },
     { // CHURCH_INDOOR
-        {"INT"},
+        {"INSIDE"},
         "",
         CHURCH_INDOOR,
         NO_OBJECT,
-        "La lumière bleutée des vitraux révèle\r\nune trappe au sol",
+        "There is a trapdoor on the floor",
         0
     },
     { // M_CHURCH_INDOOR
-        {"MINT"},
+        {"MINSIDE"},
         "",
         M_CHURCH_INDOOR,
         NO_OBJECT,
-        "Un gong imposant se dresse au milieu de la pièce",
+        "A massive gong stands in the middle of the room",
         0
     },
     { // CRYPT
-        {"CRYPTE"},
+        {"CRYPT"},
         "",
         CRYPT,
         NO_OBJECT,
-        "La crypte.Une petite statuette occupe\r\nune niche dans le mur",
+        "The crypt.A small statuette occupies a niche in the wall",
         0
     },
     { // M_CRYPT
@@ -593,103 +592,103 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         M_CRYPT,
         NO_OBJECT,
-        "La crypte.Une petite statuette occupe\r\nune niche dans le mur",
+        "The crypt.A small statuette occupies a niche in the wall",
         0
     },
     { // LABORATORY
-        {"LABO"},
+        {"LAB"},
         "",
         LABORATORY,
         NO_OBJECT,
-        "Sur le poêle,un chaudron rempli d'eau",
+        "On the stove,a cauldron filled with water",
         0
     },
     { // M_LABORATORY
-        {"MLABO"},
+        {"MLAB"},
         "",
         M_LABORATORY,
         NO_OBJECT,
-        "Odeur de rouille et d'humidité",
+        "Smell of rust and humidity",
         0
     },
     { // MIRROR_ROOM
-        {"SALLE"},
+        {"ROOM"},
         "",
         MIRROR_ROOM,
         NO_OBJECT,
-        "la salle du miroir.\r\nUn squelette gît sur le sol",
+        "The mirror room.A skeleton lies on the floor",
         0
     },
     { // M_MIRROR_ROOM
-        {"MSALLE"},
+        {"MROOM"},
         "",
         M_MIRROR_ROOM,
         NO_OBJECT,
-        "De l'autre coté du miroir",
+        "On the other side of the mirror",
         0
     },
     { // HUT_OUTDOOR
-        {"EXTCAB"},
+        {"OUTHUT"},
         "",
         HUT_OUTDOOR,
         NO_OBJECT,
-        "Quiétude absolue",
+        "Absolute tranquility",
         0
     },
     { // M_HUT_OUTDOOR
-        {"MEXTCAB"},
+        {"MOUTHUT"},
         "",
         M_HUT_OUTDOOR,
         NO_OBJECT,
-        "Une cabane à la cime des arbres",
+        "A hut at the treetop",
         0
     },
     { // HUT_INDOOR
-        {"INTCAB"},
+        {"INHUT"},
         "",
         HUT_INDOOR,
         NO_OBJECT,
-        "Enfin seul!",
+        "Finally alone!",
         0
     },
     { // M_HUT_INDOOR
-        {"MINTCAB"},
+        {"MINHUT"},
         "",
         M_HUT_INDOOR,
         NO_OBJECT,
-        "Un vieux moine se repose sur un fauteuil",
+        "An old monk rests on an armchair",
         0
     },
     { // CAVERN_OUTDOOR
-        {"EXTCAVE"},
+        {"OUTCAVE"},
         "",
         CAVERN_OUTDOOR,
         NO_OBJECT,
-        "Une tour en ruine envahie par la végéta-tion",
+        "A ruined tower overgrown with vegetation",
         0
     },
     { // M_CAVERN_OUTDOOR
-        {"MEXTCAVE"},
+        {"MOUTCAVE"},
         "",
         M_CAVERN_OUTDOOR,
         NO_OBJECT,
-        "Les vestiges d'une gloire passée",
+        "The remains of a past glory",
         0
     },
     { // CAVERN_INDOOR
-        {"INTCAVE"},
+        {"INCAVE"},
         "",
         CAVERN_INDOOR,
         NO_OBJECT,
-        "Un grand coffre occupe une bonne partie de la cave",
+        "A large chest occupies much of the cave",
         0
     },
     { // M_CAVERN_INDOOR
-        {"MINTCAVE"},
+        {"MINCAVE"},
         "",
         M_CAVERN_INDOOR,
         NO_OBJECT,
-        "Un grand coffre occupe une bonne partie de la cave",
+        "A large chest occupies much of the cave",
         0
     },
     { // SECRET_ROOM
@@ -697,7 +696,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         SECRET_ROOM,
         NO_OBJECT,
-        "Une salle dorée.Un mur est occupé par  un bas-relief",
+        "A golden room.A wall is covered by a bas-relief",
         0
     },
     { // M_SECRET_ROOM
@@ -705,7 +704,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         M_SECRET_ROOM,
         NO_OBJECT,
-        "Une salle dorée.Un mur est occupé par  un bas-relief",
+        "A golden room.A wall is covered by a bas-relief",
         0
     }
 };
