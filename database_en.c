@@ -352,8 +352,8 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         1 // 0b00000001, MASK_CLOSED
     },
     { // CHURCH
-        {"CHAPEL", "RUIN", "CHURCH"},
-        "the chapel",
+        {"CHURCH", "CHAPEL", "RUIN"},
+        "the church",
         CHURCH,
         CHURCH_OUTDOOR,
         "A dilapidated building",
@@ -552,7 +552,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         CHURCH_OUTDOOR,
         NO_OBJECT,
-        "A clearing.On top of a hill,an abandoned chapel",
+        "A clearing.On top of a hill,an abandoned church",
         0
     },
     { // M_CHURCH_OUTDOOR
@@ -560,7 +560,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         M_CHURCH_OUTDOOR,
         NO_OBJECT,
-        "A clearing.On top of a hill,an abandoned chapel",
+        "A clearing.On top of a hill,an abandoned church",
         0
     },
     { // CHURCH_INDOOR

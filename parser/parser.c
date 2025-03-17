@@ -115,7 +115,7 @@ bool isInArray(char* s, const char** array, int len) {
 		{"LOOK", "EXAM", "SEE", "X", ""}, // Regarder
 		{"SEAR", "LIST", "", "", ""}, // Fouiller
 		{"TAKE", "ROB", "STEA", "PICK", "DETA", "DISC"}, // Prendre
-		{"USE", "COMB", "ACTI", "HIT", "ATTA", ""}, // Utiliser
+		{"USE", "COMB", "ACTI", "HIT", "ATTA", "KNOC"}, // Utiliser
 		{"PUT", "PLAC", "DEPO", "INSE", "ADD", ""}, // Poser
 		{"PULL", "", "", "", "", ""}, // Tirer
 		{"PUSH", "", "", "", "", ""}, // Pousser
