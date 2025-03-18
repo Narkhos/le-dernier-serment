@@ -109,12 +109,22 @@ void game() {
 	printf("\x96\x9A\x9A\x9A\x9A\x9A\x98\r\n");
 	printf("\x93\x99");
 
+#if LANGUAGE == 1 // French
 	setCursor(1,4);
 	printf("LE");
 	setCursor(1,6);
 	printf("DERNIER");
 	setCursor(1,8);
 	printf("SERMENT");
+#endif
+#if LANGUAGE == 2 // English
+	setCursor(3,4);
+	printf("THE");
+	setCursor(3,6);
+	printf("LAST");
+	setCursor(3,8);
+	printf("OATH");
+#endif
 
 	setCursor(9,11);
 	printf("\x96\x9C\r\n");
