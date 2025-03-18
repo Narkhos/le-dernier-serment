@@ -7,3 +7,4 @@ convImgCpc
 *.rel
 *.sym
 database.c
+compass.scr
