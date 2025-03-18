@@ -9,14 +9,17 @@ if "%~1"=="" (
 if "%~1"=="fr" (
     set language=1
     copy database_fr.c database.c
+    copy compass_fr.scr compass.scr
 ) else (
     if "%~1"=="en" (
         set language=2
-        copy database_en.c database.c
     ) else (
         echo Langue inconnue on passe en anglais
         set language=2
     )
+
+    copy database_en.c database.c
+    copy compass_en.scr compass.scr
 )
 set path=C:\Windows\System32;.\SDCC36\bin
 echo COMPILING TECHNICAL LIB ...
