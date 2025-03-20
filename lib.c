@@ -509,7 +509,12 @@ void printu(char* text) {
     if (strchr(",.;", text[i]) != NULL) {
       printf("%c ", text[i]);
     } else if(strchr("!?:", text[i]) != NULL) {
-      printf(" %c ", text[i]);
+      #if LANGUAGE == 1 // French
+        printf(" %c ", text[i]);
+      #endif
+      #if LANGUAGE == 2 // English
+        printf("%c ", text[i]);
+      #endif
     } else {
 		  printf("%c", convertUnicode(text + i, &ignoreNext));
     }
