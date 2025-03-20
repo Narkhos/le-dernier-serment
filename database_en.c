@@ -68,7 +68,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "the flute",
         FLUTE,
         BASRELIEF,
-        "The flute and the musician are sculpted as one piece",
+        "The flute and the musician are\r\nsculpted as one piece",
         0
     },
     { // FLUTE (BAS-RELIEF)
@@ -76,7 +76,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "the flute",
         M_FLUTE,
         M_BASRELIEF,
-        "The flute and the musician are sculpted as one piece",
+        "The flute and the musician are\r\nsculpted as one piece",
         0
     },
     { // STOVE
@@ -108,7 +108,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "the ladder",
         LADDER,
         M_FOREST,
-        "The ladder disappears into the foliage of the trees",
+        "The ladder disappears into the foliage\r\nof the trees",
         0
     },
     { // TOWER
@@ -276,7 +276,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "the scepter",
         ARTEFACT,
         CHEST,
-        "A staff with holes and a ball at the end",
+        "A staff with holes and a ball\r\nat the end",
         0b00000100
     },
     { // GONG
@@ -308,7 +308,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "the statuette",
         STATUETTE,
         CRYPT,
-        "A statue fixed to a base with a small hole",
+        "A statue fixed to a base\r\nwith a small hole",
         128 // 0b10000000 // MASK_CUSTOM_STATE
     },
     { // M_STATUETTE
@@ -316,7 +316,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "the statuette",
         M_STATUETTE,
         M_CRYPT,
-        "A statue fixed to a base with a small hole",
+        "A statue fixed to a base\r\nwith a small hole",
         0
     },
     { // WHISTLE
@@ -528,7 +528,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         GOD_ROOM,
         NO_OBJECT,
-        "A large sphere floats in the middle of a strange landscape",
+        "A large sphere floats in the middle\r\nof a strange landscape",
         0
     },
     { // FOREST
@@ -552,7 +552,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         CHURCH_OUTDOOR,
         NO_OBJECT,
-        "A clearing.On top of a hill,an abandoned church",
+        "A clearing.On top of a hill,\r\nan abandoned church",
         0
     },
     { // M_CHURCH_OUTDOOR
@@ -560,7 +560,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         M_CHURCH_OUTDOOR,
         NO_OBJECT,
-        "A clearing.On top of a hill,an abandoned church",
+        "A clearing.On top of a hill,\r\nan abandoned church",
         0
     },
     { // CHURCH_INDOOR
@@ -576,7 +576,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         M_CHURCH_INDOOR,
         NO_OBJECT,
-        "A massive gong stands in the middle of the room",
+        "A massive gong stands in the middle\r\nof the room",
         0
     },
     { // CRYPT
@@ -584,7 +584,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         CRYPT,
         NO_OBJECT,
-        "The crypt.A small statuette occupies a niche in the wall",
+        "The crypt.A small statuette occupies\r\na niche in the wall",
         0
     },
     { // M_CRYPT
@@ -592,7 +592,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         M_CRYPT,
         NO_OBJECT,
-        "The crypt.A small statuette occupies a niche in the wall",
+        "The crypt.A small statuette occupies\r\na niche in the wall",
         0
     },
     { // LABORATORY
@@ -600,7 +600,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         LABORATORY,
         NO_OBJECT,
-        "On the stove,a cauldron filled with water",
+        "On the stove,a cauldron\r\nfilled with water",
         0
     },
     { // M_LABORATORY
@@ -616,7 +616,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         MIRROR_ROOM,
         NO_OBJECT,
-        "The mirror room.A skeleton lies on the floor",
+        "The mirror room.\r\nA skeleton lies on the floor",
         0
     },
     { // M_MIRROR_ROOM
@@ -696,7 +696,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         SECRET_ROOM,
         NO_OBJECT,
-        "A golden room.A wall is covered by a bas-relief",
+        "A golden room.\r\nA wall is covered by a bas-relief",
         0
     },
     { // M_SECRET_ROOM
@@ -704,7 +704,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         M_SECRET_ROOM,
         NO_OBJECT,
-        "A golden room.A wall is covered by a bas-relief",
+        "A golden room.\r\nA wall is covered by a bas-relief",
         0
     }
 };

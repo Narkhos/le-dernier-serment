@@ -3,12 +3,12 @@
 
 // BEHAVIOR
 #define _T0001 "You open the chest with the key"
-#define _T0002 "Just because I can't see you doesn't mean I can't sense your presence"
+#define _T0002 "Just because I can't see you doesn't\r\nmean I can't sense your presence"
 #define _T0003 "Hey! Do you think I can't see you?"
 #define _T0004 "You listen to your inner voice"
 #define _T0005 "Better keep it"
 #define _T0006 "You play a few random notes"
-#define _T0007 "You blow into the scepter.It makes a hollow sound"
+#define _T0007 "You blow into the scepter.\r\nIt makes a hollow sound"
 #define _T0008 "POC!"
 #define _T0009 "DING"
 #define _T0010 "BONG"
@@ -16,12 +16,12 @@
 #define _T0012 "The cauldron contains a %s liquid"
 #define _T0013 "The statue turns,the door slides"
 #define _T0014 "It doesn't move"
-#define _T0015 "You attach the whistle to the end of the scepter."
+#define _T0015 "You attach the whistle to the end\r\nof the scepter."
 #define _T0016 "You play the sheet music"
 #define _T0017 "You can SEARCH it"
 #define _T0018 "You lock the chest"
 #define _T0019 "It's stuck with rust"
-#define _T0020 "A golden whistle is attached to his flute"
+#define _T0020 "A golden whistle is attached\r\nto his flute"
 #define _T0021 "A sheet of music rests on the stand"
 #define _T0022 "A staircase leads down to the basement"
 #define _T0023 "The hatch is closed"
@@ -44,15 +44,15 @@
 #define _T0040 "The POKER is already in place"
 #define _T0041 "The mirror is firmly fixed to the wall"
 #define _T0042 "You try to pass through the mirror"
-#define _T0043 "but the more you push, the more it resists"
+#define _T0043 "but the more you push, the more it\r\nresists"
 #define _T0044 "No way I'm giving up now!"
-#define _T0045 "Only the fall of a few debris from the roof answers you"
+#define _T0045 "Only the fall of a few debris from\r\nthe roof answers you"
 #define _T0046 "The door is closed"
 #define _T0047 "TIBIA"
 #define _T0048 "You're not going to mix it by hand!"
 #define _T0049 "SALT"
 #define _T0050 "PEPPER"
-#define _T0051 "Impossible to go down, the ladder is broken halfway"
+#define _T0051 "Impossible to go down, the ladder\r\nis broken halfway"
 #define _T0052 "You shall not pass!"
 #define _T0053 "You knock out the guard"
 #define _T0054 "You need a strong argument to defeat me"
@@ -150,27 +150,27 @@
 #define _T0136 "-When the substrate is yellow,add salt"
 #define _T0137 "-Stir when it turns orange"
 #define _T0138 "-At pink,add the berries"
-#define _T0139 "Remember to shut down the heat,otherwise,"
-#define _T0140 "the substrate will regain its initial properties"
-#define _T0141 "as soon as it turns white."
+#define _T0139 "Remember to shut down the heat otherwise"
+#define _T0140 "the substrate will regain its initial"
+#define _T0141 "properties as soon as it turns white."
 
 // recipeInvisible
 #define _T0142 "-At yellow,add the berries"
 #define _T0143 "-Stir at orange"
 #define _T0144 "-At pink,add the pepper"
-#define _T0145 "This recipe is the TRANSPOSED version of the light potion"
+#define _T0145 "This recipe is the TRANSPOSED version\r\nof the light potion"
 
 // recipeNervous
 #define _T0146 "-Light the fire and add salt"
 #define _T0147 "-Immediately add the mint"
 #define _T0148 "-Stop heating"
 #define _T0149 "-At yellow,stir."
-#define _T0150 "If everything went well,the liquid should turn green."
+#define _T0150 "If everything went well,\r\nthe liquid should turn green."
 
 // recipeSleepy
 #define _T0151 "-TRANSPOSE the recipe of the stimulant"
 #define _T0152 "potion"
-#define _T0153 "WARNING: this mixture is indistinguishable from its TRANSPOSITION"
+#define _T0153 "WARNING: this mixture is\r\nindistinguishable from its TRANSPOSITION"
 
 // recipeBeginning
 #define _T0154 "-Light the fire and add salt"
@@ -181,28 +181,28 @@
 // DIALOG
 // finEpreuve
 #define _T0158 "Go,find Orpheus' Scepter"
-#define _T0159 "It is the key to the curse that has befallen your people"
+#define _T0159 "It is the key to the curse that\r\nhas befallen your people"
 
 // dialogHermit
-#define _T0160 "Mmmh?Uh...Yes...What is it?"
+#define _T0160 "Mmmh?Uh… Yes… What is it?"
 #define _T0161 "How can I help you?"
-#define _T0162 "It's been a long time since I had any visitors."
-#define _T0163 "My name is Hermes,I am a monk and an alchemist in my spare time."
+#define _T0162 "It's been a long time since\r\nI had any visitors."
+#define _T0163 "My name is Hermes,I am a monk\r\nand an alchemist in my spare time."
 #define _T0164 "What is this amulet again?"
 #define _T0165 "How do I get out of here?"
 #define _T0166 "I am looking for Orpheus' Scepter"
 #define _T0167 "I need this key!"
 #define _T0168 "Offer a drink"
 #define _T0169 "Bye"
-#define _T0170 "Here is an amulet that allows you to cross the mirror"
+#define _T0170 "Here is an amulet that allows you to\r\ncross the mirror"
 #define _T0171 "You can keep it"
 #define _T0172 "It is for crossing the mirror"
 #define _T0173 "The amulet prevents it from seeing you"
-#define _T0174 "Don't touch this artifact,it is dangerous"
+#define _T0174 "Don't touch this artifact,\r\nit is dangerous"
 #define _T0175 "Anyway,I locked it up"
 #define _T0176 "No way,the scepter is too dangerous!"
-#define _T0177 "Mint tea,my favorite drink. Thank you very much!"
-#define _T0178 "I feel a little tired.I think I will take a nap."
+#define _T0177 "Mint tea,my favorite drink.\r\nThank you very much!"
+#define _T0178 "I feel a little tired.\r\nI think I will take a nap."
 #define _T0179 "Ah!Thank you,I feel refreshed!"
 #define _T0180 "I would love some mint tea"
 #define _T0181 "Here are some mint leaves to prepare it"
@@ -219,16 +219,16 @@
 #define _T0190 "beauty."
 
 // endingMessage
-#define _T0191 "Nahash:You helped me destroy your world."
-#define _T0192 "I will use the energy of this destruction to create a universe in my image."
-#define _T0193 "To thank you,here is your kingdom!You are free to stay here for eternity..."
+#define _T0191 "Nahash:You helped me destroy\r\nyour world."
+#define _T0192 "I will use the energy of this\r\ndestruction to create a universe in my\r\nimage."
+#define _T0193 "To thank you,here is your kingdom!\r\nYou are free to stay here for eternity…"
 
 #define _T0194 "You wake up in the church.\r\nYou struggle to remember why\r\nyou came here."
-#define _T0195 "Back home,the village is deserted, and you feel your mind slowly slipping away."
+#define _T0195 "Back home,the village is deserted,\r\nand you feel your mind slowly slipping\r\naway."
 
-#define _T0196 "You wake up in the church.As you return to your village,you are carried by the feeling of a\r\nfulfilled duty."
+#define _T0196 "You wake up in the church.As you\r\nreturn to your village,you are carried\r\nby the feeling of a\r\nfulfilled duty."
 
-#define _T0197 "The explosion was so strong that it destroyed half the country.There is not much left to save now.But in any case,you are no longer able to do so."
+#define _T0197 "The explosion was so strong that\r\nit destroyed half the country.\r\nThere is not much left to save now.\r\nBut in any case,you are no longer\r\nable to do so."
 
 // ending
 #define _T0198 "List of endings achieved"
@@ -236,8 +236,8 @@
 
 // SCENE
 // introNahash
-#define _T0200 "Rubble falls from the walls and some stones drop from the ceiling"
-#define _T0201 "I am the God Nahash,and I have heard your prayer"
+#define _T0200 "Rubble falls from the walls and some\r\nstones drop from the ceiling"
+#define _T0201 "I am the God Nahash,and I have\r\nheard your prayer"
 #define _T0202 "This world is a trial"
 #define _T0203 "Master its rules and find the way out"
 
