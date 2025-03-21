@@ -1,0 +1,328 @@
+<html>
+<head>
+
+<style>
+/* marron #3a3522 rouge #7c3838 vert #647859  jaune #b5a37e*/
+/* https://lospec.com/palette-list/2-bit-pips */
+
+@font-face {
+    font-family: 'kingthings';
+    src: url('Kingthings_Foundation.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #3a3522;
+  font-family: system-ui;
+}
+h1 {
+	background-color: #7c3838;
+	color: #b5a37e;
+	padding-left: 0.3em;
+	font-family: kingthings;
+}
+
+h2 {
+	background-color: #7c3838;
+	color: #b5a37e;
+	padding-left: 0.3em;
+	font-family: kingthings;
+}
+
+h2 {
+	background-color: #7c3838;
+	color: #b5a37e;
+	padding-left: 0.3em;
+	font-family: kingthings;
+}
+
+h3 {
+	background-color: #7c3838;
+	color: #b5a37e;
+	padding-left: 0.3em;
+	font-family: kingthings;
+}
+
+p {
+	text-align: justify;
+	margin-block-end: 0.5em;
+}
+
+a {
+	color: #647859;
+	font-weight: bold;
+}
+
+.info {
+	background-color: #647859;
+	border: 1px solid;
+	padding: 1em;
+	color: #b5a37e;
+	font-weight: bold;
+}
+
+.warning {
+	background-color: #647859;
+	border: 1px solid;
+	padding: 1em;
+	color: #b5a37e;
+	font-weight: bold;
+	
+}
+
+.icone {
+    font-size: xx-large;
+    float: left;
+    padding-right: 10px;
+	font-weight: normal;
+}
+
+@page {
+  size: A5; /* Définit la taille de la page en format A5 */
+  margin: 0; /* Supprime les marges pour utiliser tout l'espace disponible */
+}
+
+.slide {
+  width: 148mm; /* Largeur de chaque diapositive A5 */
+  height: 210mm; /* Hauteur de chaque diapositive A5 */
+  margin: 0;
+  padding: 0;
+  page-break-after: always; /* Force un saut de page après chaque diapositive */
+  background-color: #b5a37e;
+}
+
+/* Les règles suivantes ajustent le contenu de chaque diapositive selon vos besoins */
+.slide-content {
+  width: 100%;
+  height: 100%;
+  padding: 10mm; /* Marge intérieure pour le contenu */
+  box-sizing: border-box;
+  position:relative;
+}
+.page-number {
+	position:absolute;
+	bottom: 2mm;
+	right: 50%;
+}
+
+</style>
+</head>
+<body>
+<div class="slide"><div class="slide-content">
+<h1>Le Dernier Serment</h1>
+<h2>Installation</h2>
+<p>Le Dernier Serment est un jeu conçu pour fonctionner sur Amstrad Cpc 6128. Il est fourni au format .dsk</p>
+<p>Il est donc possible d'y jouer sur un Amstrad Cpc, mais aussi sur n'importe quel émulateur de cette machine.</p>
+<p>Par exemple l'émulateur <a href="http://www.emu-france.com/emulateurs/10-ordinateurs/97-amstrad-cpc-cpc/7781-caprice-forever-64-bits/" target="_blank">Caprice</a></p>
+<p>Si vous préférez un émulateur en ligne, vous pouvez regarder du côté de <a href="https://crocods.org/web/" target="_blank">Crocods</a>. Il faudra tout de même télécharger le .dsk pour l'ouvrir ensuite depuis l'interface web de l'émulateur.</p>
+<div>Une fois la disquette insérée vous pouvez lancer le jeu. Pour ce faire, à l'invite de commande de l'Amstrad, tapez <b>run"disc.bas"</b> ou juste <b>run"disc</b></div>
+<p>Les commandes <b>SAUVER</b> et  <b>CHARGER</b> permettent d'enregistrer votre progression (un seul slot de sauvegarde).</p>
+
+<div class="info"><span class="icone">&#128712;</span><p>Sur émulateur, utilisez les savestates de l'émulateur si vous voulez gérer plusieurs sauvegardes.</p></div>
+<div style="text-align:center;margin-top:50px;"><img src="./sceptre.png"></img></div>
+
+<div class="page-number">1</div>
+</div></div>
+
+<div class="slide"><div class="slide-content">
+<h2>Comment jouer</h2>
+<h3>Commandes</h3>
+<p>Le Dernier Serment est un jeu dit à <b>PARSER</b>, c'est-à-dire qu'il faut saisir des commandes pour effectuer les actions.</p>
+Les commandes peuvent être :
+<ul>
+	<li>juste un <b>VERBE</b></li>
+		Exemples :
+		<ul>
+			<li><b>NORD</b></li>
+			<li><b>INVENTAIRE</b></li>
+			<li><b>ATTENDRE</b></li>
+		</ul>
+	<li>un <b>VERBE</b> et un <b>OBJET</b></li>
+		Exemples :
+		<ul>
+			<li><b>PRENDRE</b> la <b>CLEF</b></li>
+			<li><b>PARLER</b> a <b>ORACLE</b></li>
+			<li><b>REGARDER MOI</b> (mais aussi <b>ME REGARDER</b>)</li>
+		</ul>
+	<li><b>un VERBE</b>, un <b>OBJET</b> et un <b>COMPLEMENT</b></li>
+	Exemples :
+		<ul>
+			<li><b>UTILISER</b> la <b>CLEF</b> sur la <b>PORTE</b></li>
+			<li><b>METTRE</b> la <b>CLEF</b> sur la <b>TABLE</b></li>
+		</ul>
+</ul>
+
+<p>Dans les exemples ci-dessus, les mots de liaisons peuvent être ou non saisis.</p>
+	
+<div class="info"><span class="icone">&#128712;</span><p>Les commandes peuvent être saisies en MAJUSCULES ou MINUSCULES indifféremment, mais SANS ACCENT. Cela évite de rencontrer des problèmes avec les différentes versions du clavier Amstrad.</p></div>
+
+<div class="page-number">2</div>
+</div></div>
+
+<div class="slide"><div class="slide-content">
+<h3>Choix</h3>
+<p>Certaines phases du jeu proposent des choix plutôt que des commandes. Elles se reconnaissent par le fait qu'une liste de possibilités s'affiche à l'écran.</p>
+<p>Dans ces phases, utilisez <b>les flèches HAUT et BAS</b> pour sélectionner votre choix, puis appuyez sur <b>ENTRER</b></p>
+
+<h3>Ecran de jeu</h3>
+
+<div style="height:250px;text-align:center;padding-top:5px;"><img src="./screenshot.png"></div>
+<p>
+<b>Boussole</b> : Elle est là pour que vous ne perdiez pas le nord.<br/>
+<b>Sablier</b> : Il indique le nombre de tours écoulés depuis le début de votre aventure.<br/>
+<b>Portrait</b> : Il vous informe de votre état.<br/>
+<b>Description</b> : Zone de texte décrivant les lieux, les objets et le résultat de vos actions.<br/>
+<b>Choix</b> : Liste des options possible en mode <b>CHOIX</b><br/>
+<b>Commande</b> : En bas de l'écran, une bande est réservée à la saisie de commandes. Lorsque le jeu est en mode <b>PARSER</b>, le caractère <b>'&#62;'</b> apparaît en début de ligne.
+</p>
+<div class="page-number">3</div>
+</div></div>
+
+<div class="slide"><div class="slide-content">
+<h2>Prologue</h2>
+<p>La lumière blafarde de la boule de cristal éclaire le visage aux yeux vides de la vieille femme. L'oracle de votre village vous a convoqué et vous attendez fébrilement d'entendre ce qu'elle va vous dire.</p>
+<p>
+<p>— Nous n'avons plus beaucoup de temps...</p>
+<p>— J'ai exploré les méandres de l'avenir... toi seul as encore une chance de lever la malédiction qui frappe notre village.</p>
+<p>— Part sans tarder... vers le nord... au milieu de la forêt... La chapelle... Hermès...</p>
+<p>Un long moment s'écoule alors que l'oracle reste prostrée. Vous reconnaissez ces signes. Tous les gens frappés par la malédiction perdent progressivement leur libre arbitre.</p>
+<p>Ils agissent d'abord mécaniquement puis, progressivement, perdent l'usage de la parole pour finir incapables de la moindre action... et se laissent mourir.</p>
+
+<img src="./carte.png" style="top: 450px;position: absolute;"></img>
+<div class="page-number">4</div>
+</div></div>
+
+<div class="slide"><div class="slide-content">
+<h2>Le Grimoire</h2>
+<p>Ceci est la retranscription du grimoire d'Hermès.</p>
+
+<h3>Lumière</h3>
+
+	<ul>
+		<li>Quand le substrat est jaune, salez</li>
+		<li>Mélangez lorsqu'il est orange</li>
+		<li>Au rose, incorporez les baies</li>
+	</ul>
+	<p>Pensez à couper le feu, sans quoi,
+	le substrat reprend ses propriétés
+	initiales dès qu'il passe au blanc.</p>
+	
+<h3>Invisibilité</h3>
+	<ul>
+		<li>Au jaune, incorporez les baies</li>
+		<li>Mélangez au orange</li>
+		<li>Au rose, mettez le poivre</li>
+	</ul>
+	<div class="info"><span class="icone">&#128712;</span><p>Cette recette est la <b>transposition</b> de la potion de lumière</p></div>
+	
+	<div style="text-align:center;padding-top:60px;"><img src="./chaudron.png"></img></div>
+<div class="page-number">5</div>
+</div></div>
+
+<div class="slide"><div class="slide-content">
+
+<h3>Stimulant</h3>
+
+	<ul>
+		<li>Allumez le feu et salez</li>
+		<li>Sans attendre incorporez la menthe</li>
+		<li>Arrêtez de chauffer</li>
+		<li>Au jaune, mélangez.</li>
+	</ul>
+	<p class="info"><span class="icone">&#128712;</span>Si tout s'est bien passé, le liquide devrait prendre une couleur verte.</p>
+	
+	<h3>Soporifique</h3>
+
+	<ul><li><b>Transposez</b> la recette de la potion stimulante</li></ul>
+	
+	<div class="warning"><span class="icone">&#9888;</span><p>Ce mélange est indiscernable  de sa <b>transposée</b></p></div>
+
+<h3>Aurore</h3>
+
+	<ul>
+		<li>Allumez le feu et salez</li>
+		<li>Après 1 sablier mettez les amanites</li>
+		<li>Ramenez au orange et mélangez</li>
+	</ul>
+	<div class="warning"><span class="icone">&#9888;</span><p>NE JAMAIS TRANSPOSER CETTE RECETTE</p></div>
+	
+<div class="page-number">6</div>
+</div></div>
+
+<div class="slide"><div class="slide-content">
+<h2>Astuces</h2>
+
+<h3>Raccourcis</h3>
+
+<p>Certaines commandes ont des abréviations.</p>
+<table style="margin-bottom: 10px;">
+<tr>
+<td style="width:50%;border-right: #3a3522 solid 1px;">
+<ul style="margin:0;">
+<li>NORD : <b>N</b></li>
+<li>SUD : <b>S</b></li>
+<li>EST : <b>E</b></li>
+<li>OUEST : <b>O</b></li>
+</ul>
+</td>
+<td>
+<ul>
+<li>INVENTAIRE : <b>I</b></li>
+<li>EXAMINER/REGARDER : <b>X</b></li>
+</ul>
+</td>
+</tr>
+</table>
+<div class="info"><span class="icone">&#128712;</span><p>Vous faites toujours face au NORD.</p></div>
+
+<h3>Alchimie</h3>
+
+<p>La plupart du temps, il ne sera pas nécessaire de cibler le chaudron à chaque fois.</p>
+<p>Par exemple : <b>METTRE le FROMAGE dans le CHAUDRON</b> peut aussi s'écrire <b>METTRE le FROMAGE</b>.</p>
+<p>De même pour mélanger. Il n'est pas nécessaire d'écrire <b>MELANGER le SUBSTRAT avec la CUILLERE</b>. Une simple commande <b>MELANGER</b> suffit, dès lors que vous avez dans votre inventaire un objet adapté à cette fonction.</p>
+<div class="info"><span class="icone">&#128712;</span><p>Surveillez bien la couleur du mélange. Elle donne une indication de température et d'état.</p></div>
+<div class="page-number">7</div>
+</div></div>
+
+<div class="slide"><div class="slide-content">
+<h2>Crédits</h2>
+<h3>Auteur</h3>
+<table><tr>
+<td style="width:25%">
+<img src="./narkhos.png"></img></div>
+</td>
+<td>
+<p style="margin-top: 16px;"><a href="https://narkhos.itch.io/le-dernier-serment" target="_blank">Le Dernier Serment</a> à été réalisé<br/>par Xavier Direz, aka <a href="https://narkhos.itch.io/" target="_blank">Narkhos</a> à l'occasion<br/>du <a href="https://itch.io/jam/concours-de-fiction-interactive-francophone-2024" target="_blank">Concours de Fiction Interactive 2024</a>.</p>
+</td>
+</tr></table>
+<h3>Bêta-test</h3>
+<ul>
+<li>Samuel Verschelde (Stormi)</li>
+<li><a href="https://www.youtube.com/user/TehSeak" target="_blank">Old Seak</a></li>
+</ul>
+<h3>Ressources utilisées</h3>
+
+<h4>Programmation en C pour l'Amstrad CPC</h4>
+
+<p>
+<a href="https://www.youtube.com/watch?v=88MaOZglJQA&list=PLWxwRSOzEfLRHZb7Vhcyp3gBLvsDnPxjK" target="_blank">Oldschool is Beautifull</a>
+</p>
+<p>
+<a href="http://www.cpcmania.com/Docs/Programming/Programming.htm" target="_blank">CPC Mania</a>
+</p>
+<p>
+<a href="http://www.cantrell.org.uk/david/tech/cpc/cpc-firmware/" target="_blank">Références du firmware de l'Amstrad CPC</a>
+</p>
+
+<h4>Ressources annexes</h4>
+<p>
+Palette de couleur utilisée pour ce manuel : <a href="https://lospec.com/palette-list/2-bit-pips" target="_blank">Aurel L.</a>
+</p>
+Font utilisées pour les titres du manuel : <a href="https://www.fontsquirrel.com/fonts/Kingthings-Foundation?q%5Bterm%5D=medieval&q%5Bsearch_check%5D=Y" target="_blank">Kinhthings Foundation</a></p>
+<p>
+</p>
+<div class="page-number">8</div>
+</div></div>
+</body>
+</html>

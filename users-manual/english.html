@@ -1,0 +1,330 @@
+<html>
+<head>
+
+<style>
+/* marron #3a3522 rouge #7c3838 vert #647859  jaune #b5a37e*/
+/* https://lospec.com/palette-list/2-bit-pips */
+
+@font-face {
+    font-family: 'kingthings';
+    src: url('Kingthings_Foundation.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #3a3522;
+  font-family: system-ui;
+}
+h1 {
+	background-color: #7c3838;
+	color: #b5a37e;
+	padding-left: 0.3em;
+	font-family: kingthings;
+}
+
+h2 {
+	background-color: #7c3838;
+	color: #b5a37e;
+	padding-left: 0.3em;
+	font-family: kingthings;
+}
+
+h2 {
+	background-color: #7c3838;
+	color: #b5a37e;
+	padding-left: 0.3em;
+	font-family: kingthings;
+}
+
+h3 {
+	background-color: #7c3838;
+	color: #b5a37e;
+	padding-left: 0.3em;
+	font-family: kingthings;
+}
+
+p {
+	text-align: justify;
+	margin-block-end: 0.5em;
+}
+
+a {
+	color: #647859;
+	font-weight: bold;
+}
+
+.info {
+	background-color: #647859;
+	border: 1px solid;
+	padding: 1em;
+	color: #b5a37e;
+	font-weight: bold;
+}
+
+.warning {
+	background-color: #647859;
+	border: 1px solid;
+	padding: 1em;
+	color: #b5a37e;
+	font-weight: bold;
+	
+}
+
+.icone {
+    font-size: xx-large;
+    float: left;
+    padding-right: 10px;
+	font-weight: normal;
+}
+
+@page {
+  size: A5; /* Définit la taille de la page en format A5 */
+  margin: 0; /* Supprime les marges pour utiliser tout l'espace disponible */
+}
+
+.slide {
+  width: 148mm; /* Largeur de chaque diapositive A5 */
+  height: 210mm; /* Hauteur de chaque diapositive A5 */
+  margin: 0;
+  padding: 0;
+  page-break-after: always; /* Force un saut de page après chaque diapositive */
+  background-color: #b5a37e;
+}
+
+/* Les règles suivantes ajustent le contenu de chaque diapositive selon vos besoins */
+.slide-content {
+  width: 100%;
+  height: 100%;
+  padding: 10mm; /* Marge intérieure pour le contenu */
+  box-sizing: border-box;
+  position:relative;
+}
+.page-number {
+	position:absolute;
+	bottom: 2mm;
+	right: 50%;
+}
+
+</style>
+</head>
+<body>
+<div class="slide"><div class="slide-content">
+<h1>The Last Oath</h1>
+<h2>Installation</h2>
+<p>The Last Oath is a game designed to run on the Amstrad Cpc 6128. It is supplied in .dsk format.</p>
+<p>It can be played on an Amstrad Cpc, but also on any Cpc emulator.</p>
+<p>For example <a href="http://www.emu-france.com/emulateurs/10-ordinateurs/97-amstrad-cpc-cpc/7781-caprice-forever-64-bits/" target="_blank">Caprice</a> emulator</p>
+<p>If you prefer an online emulator, you can take a look at <a href="https://crocods.org/web/" target="_blank">Crocods</a>. You will still need to download the .dsk file and open it from the emulator's web interface.</p>
+
+<div>Once the floppy disk has been inserted, you can launch the game. To do this, at the Amstrad command prompt, type <b>run"disc.bas"</b> or simply <b>run"disc</b></div>
+<p><b>SAVE</b> and  <b>LOAD</b> commands allow you ti save/load your progression (single backup slot).</p>
+
+<div class="info"><span class="icone">&#128712;</span><p>On an emulator, use the emulator's savestates if you want to manage several backups.</p></div>
+
+<div style="text-align:center;margin-top:50px;"><img src="./sceptre.png"></img></div>
+
+<div class="page-number">1</div>
+</div></div>
+
+<div class="slide"><div class="slide-content">
+<h2>How to play</h2>
+<h3>Controls</h3>
+<p>The Last Oath is a <b>PARSER</b> game, i.e. you need to enter commands to carry out the actions.</p>
+Commands can be:
+<ul>
+	<li>just a <b>VERB</b></li>
+		Examples:
+		<ul>
+			<li><b>NORTH</b></li>
+			<li><b>INVENTORY</b></li>
+			<li><b>WAIT</b></li>
+		</ul>
+	<li>a <b>VERB</b> plus an <b>OBJECT</b></li>
+		Examples:
+		<ul>
+			<li><b>Take</b> the <b>KEY</b></li>
+			<li><b>TALK</b> to <b>ORACLE</b></li>
+			<li><b>LOOK AT ME</b></li>
+		</ul>
+	<li><b>a VERB</b>, an <b>OBJECT</b> and a <b>COMPLEMENT</b></li>
+	Examples:
+		<ul>
+			<li><b>USE</b> the <b>KEY</b> with the <b>DOOR</b></li>
+			<li><b>PUT</b> the <b>KEY</b> on the <b>TABLE</b></li>
+		</ul>
+</ul>
+
+<p>In the examples above, the linking words may or may not be entered.</p>
+	
+<div class="info"><span class="icone">&#128712;</span><p>Commands can be entered in either UPPERCASE or LOWERCASE.</p></div>
+
+<div class="page-number">2</div>
+</div></div>
+
+<div class="slide"><div class="slide-content">
+<h3>Choices</h3>
+<p>Some phases of the game offer choices rather than commands. In these cases, a list of options appears on the screen.</p>
+<p>In these phases, use <b>the UP and DOWN arrows</b> to select your choice, then press <b>ENTER</b>.</p>
+
+<h3>Game screen</h3>
+
+<div style="height:250px;text-align:center;padding-top:5px;"><img src="./screenshot.png"></div>
+<p>
+<b>Compass</b>: It's there to keep you on the right track.<br/>
+<b>Hourglass</b>: This shows the number of turns that have elapsed since the start of your adventure.<br/>
+<b>Portrait</b>: Informs you of your status.<br/>
+<b>Description</b>: Text box describing the locations, objects and results of your actions.<br/>
+<b>Choices</b> : List of options available in <b>CHOICE</b> mode<br/>
+<b>Command</b>: At the bottom of the screen, a strip is reserved for entering commands. When the game is in <b>PARSER</b> mode, the <b>'&#62;'</b> character appears at the beginning of the line.
+</p>
+<div class="page-number">3</div>
+</div></div>
+
+<div class="slide"><div class="slide-content">
+<h2>Prologue</h2>
+<p>The pale light from the crystal ball shines on the old woman's empty-eyed face. The oracle of your village has summoned you and you wait feverishly to hear what she has to say.</p>
+<p>
+<p>— We don't have much time...</p>
+<p>— I've explored the twists and turns of the future... only you still have a chance of lifting the curse that has struck our village.</p>
+<p>— Set off without delay... to the north... in the middle of the forest... The chapel. Hermes...</p>
+<p>A long moment passes while the oracle remains prostrate. You recognise these signs. All those struck by the curse gradually lose their free will.</p>
+<p>At first, they act mechanically, then gradually lose the ability to speak, eventually becoming incapable of the slightest action... and letting themselves die.</p>
+
+<img src="./carte.png" style="top: 450px;position: absolute;"></img>
+<div class="page-number">4</div>
+</div></div>
+
+<div class="slide"><div class="slide-content">
+<h2>The Grimoire</h2>
+<p>This is a transcription of Hermes' grimoire.</p>
+
+<h3>Light</h3>
+
+	<ul>
+		<li>When the substrate is yellow, add salt</li>
+		<li>Stir when orange</li>
+		<li>Add the berries when pink</li>
+	</ul>
+	<p>Remember to turn off the heat, otherwise,
+	the substrate will revert to its original state
+	as soon as it turns white.</p>
+	
+<h3>Invisibilité</h3>
+	<ul>
+		<li>When yellow, add the berries</li>
+		<li>Stir when orange</li>
+		<li>When pink, add pepper</li>
+	</ul>
+	<div class="info"><span class="icone">&#128712;</span><p>This recipe is the <b>transposition</b> of the light potion</p></div>
+	
+	<div style="text-align:center;padding-top:60px;"><img src="./chaudron.png"></img></div>
+<div class="page-number">5</div>
+</div></div>
+
+<div class="slide"><div class="slide-content">
+
+<h3>Stimulant</h3>
+
+	<ul>
+		<li>Light the fire and season with salt</li>
+		<li>Without waiting, add the mint</li>
+		<li>Stop heating</li>
+		<li>Stir when yellow</li>
+	</ul>
+	<p class="info"><span class="icone">&#128712;</span>If all goes well, the liquid should turn green.</p>
+	
+	<h3>Soporific</h3>
+
+	<ul><li><b>Transpose</b> the recipe for the stimulating potion</li></ul>
+	
+	<div class="warning"><span class="icone">&#9888;</span><p>This mixture is indistinguishable from its <b>transposed</b>.</p></div>
+
+<h3>Dawn</h3>
+
+	<ul>
+		<li>Light the fire and season with salt</li>
+		<li>After 1 hourglass, add the amanites</li>
+		<li>Return to orange and stir</li>
+	</ul>
+	<div class="warning"><span class="icone">&#9888;</span><p>NEVER TRANSPOSE THIS RECIPE</p></div>
+	
+<div class="page-number">6</div>
+</div></div>
+
+<div class="slide"><div class="slide-content">
+<h2>Tips</h2>
+
+<h3>Shortcuts</h3>
+
+<p>Some commands have abbreviations.</p>
+<table style="margin-bottom: 10px;">
+<tr>
+<td style="width:50%;border-right: #3a3522 solid 1px;">
+<ul style="margin:0;">
+<li>NORTH : <b>N</b></li>
+<li>SOUTH : <b>S</b></li>
+<li>EAST : <b>E</b></li>
+<li>WEST : <b>W</b></li>
+</ul>
+</td>
+<td>
+<ul>
+<li>INVENTORY : <b>I</b></li>
+<li>EXAMINE/LOOK : <b>X</b></li>
+</ul>
+</td>
+</tr>
+</table>
+<div class="info"><span class="icone">&#128712;</span><p>You're always facing NORTH.</p></div>
+
+<h3>Alchemy</h3>
+
+<p>Most of the time, you won't need to target the cauldron every time.</p>
+<p>For example: <b>ADD the CHEESE in the CAULDRON</b> can also be written <b>ADD CHEESE</b>.</p>
+<p>The same applies to mixing. There's no need to write <b>MIX the SUBSTRATE with the SPOON</b>. A simple <b>MIX</b> command is enough, as long as you have an object in your inventory suitable for this function.</p>
+<div class="info"><span class="icone">&#128712;</span><p>The colour of the mixture gives an indication of temperature and condition.</p></div>
+<div class="page-number">7</div>
+</div></div>
+
+<div class="slide"><div class="slide-content">
+<h2>Credits</h2>
+<h3>Author</h3>
+<table><tr>
+<td style="width:25%">
+<img src="./narkhos.png"></img></div>
+</td>
+<td>
+<p style="margin-top: 16px;"><a href="https://narkhos.itch.io/le-dernier-serment" target="_blank">The Last Oath</a> was created<br/>by Xavier Direz, aka <a href="https://narkhos.itch.io/" target="_blank">Narkhos</a> for the<br/><a href="https://itch.io/jam/concours-de-fiction-interactive-francophone-2024" target="_blank">Concours de Fiction Interactive 2024</a>.</p>
+</td>
+</tr></table>
+<h3>Beta test</h3>
+<ul>
+<li>Samuel Verschelde (Stormi)</li>
+<li><a href="https://www.youtube.com/user/TehSeak" target="_blank">Old Seak</a></li>
+</ul>
+<h3>Resources</h3>
+
+<h4>Programming in C for the Amstrad CPC</h4>
+
+<p>
+<a href="https://www.youtube.com/watch?v=88MaOZglJQA&list=PLWxwRSOzEfLRHZb7Vhcyp3gBLvsDnPxjK" target="_blank">Oldschool is Beautifull</a>
+</p>
+<p>
+<a href="http://www.cpcmania.com/Docs/Programming/Programming.htm" target="_blank">CPC Mania</a>
+</p>
+<p>
+<a href="http://www.cantrell.org.uk/david/tech/cpc/cpc-firmware/" target="_blank">Amstrad CPC firmware references</a>
+</p>
+
+<h4>Additional resources</h4>
+<p>
+Colour palette used in this manual: <a href="https://lospec.com/palette-list/2-bit-pips" target="_blank">Aurel L.</a>
+</p>
+Font used for the titles of the manual: <a href="https://www.fontsquirrel.com/fonts/Kingthings-Foundation?q%5Bterm%5D=medieval&q%5Bsearch_check%5D=Y" target="_blank">Kinhthings Foundation</a></p>
+<p>
+</p>
+<div class="page-number">8</div>
+</div></div>
+</body>
+</html>
