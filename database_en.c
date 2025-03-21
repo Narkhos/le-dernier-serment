@@ -368,7 +368,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         0b01001011
     },
     { // M_CHEST
-        {"COFFRE", "BOITE"},
+        {"CHEST", "BOX"},
         "the chest",
         M_CHEST,
         M_CAVERN_INDOOR,
@@ -384,8 +384,8 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         4 // 0b00000100
     },
     { // FIREBRAND
-        {"POKER", "PIKE"},
-        "the firebrand",
+        {"POKER", "PIKE", "TISONNIER"},
+        "the poker",
         FIREBRAND,
         M_CHEST,
         "A thin pointed metal rod",
