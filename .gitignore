@@ -6,6 +6,7 @@ convImgCpc
 *.exe
 *.rel
 *.sym
+*.pdf
 database.c
 compass.scr
 title.scr
