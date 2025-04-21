@@ -1,6 +1,6 @@
 unsigned char charset[66*8] = {
 // unsigned char charset[27*8] = {
-	// a
+	// à
 	0b00010000,
 	0b00001000,
 	0b00011000,

@@ -216,7 +216,7 @@
 // endingMessage
 #define _T0191 "Nahash:tu m'as aidé à détruire ton    monde."
 #define _T0192 "Je vais utiliser l'énergie de cette des-truction pour créer un univers à mon\r\nimage."
-#define _T0193 "Pour te remercier,voici ton royaume! Tu es libre d'y rester pour l'éternité…"
+#define _T0193 "Pour te remercier,voici ton royaume! Restes-y pour l'éternité…"
 
 #define _T0194 "Vous vous réveillez dans la chapelle. \r\nVous peinez à vous rappeler pourquoi\r\nvous êtes venu ici."
 #define _T0195 "De retour chez vous,le village est     désert et vous sentez votre esprit vous quitter petit à petit."
