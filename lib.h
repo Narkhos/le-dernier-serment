@@ -130,7 +130,7 @@ void setTransparentMode(unsigned char transparent);
 void setPen(unsigned char transparent);
 
 
-extern char commandLine[32];
+extern char commandLine[35];
 char* readLine(unsigned char max_length);
 
 void setBank(unsigned char bankPatternId);

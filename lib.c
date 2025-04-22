@@ -323,9 +323,9 @@ void setPen(unsigned char transparent)
 	__endasm;
 }
 
-char commandLine[32];
+char commandLine[35];
 
-char* readLine(unsigned char max_length) {
+char* readLine(unsigned char max_index) {
 	int index = 0;
 	char inputChar = ' ';
 	while(1) {
@@ -343,7 +343,7 @@ char* readLine(unsigned char max_length) {
 				putchar(0x07);
 			}
 		} else {
-			if (index > max_length) continue;
+			if (index > max_index) continue;
 			printf("%c", inputChar);
 			commandLine[index] = inputChar;
 			index ++;

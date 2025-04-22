@@ -27,6 +27,6 @@ void init_parser_scene() {
 }
 
 int parser_scene() {
-	readLine(32);
+	readLine(33);
 	return STATE_CHOICE;
 }

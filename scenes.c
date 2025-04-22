@@ -45,7 +45,7 @@ void parser() {
     setCursor(0, 24);
     printf(">                                       ");
     setCursor(1,24);
-    readLine(32); // renseigne la variable globale commandLine
+    readLine(33); // renseigne la variable globale commandLine
     setBank(BANK_MODE_DATABASE);
 
     commandLine[strcspn(commandLine, "\r\n")] = 0;
@@ -173,7 +173,7 @@ void (*scenes[3])() = {
 bool executeCommand(char* commandLine) {
 	bool result = false;
 	unsigned char objectId;
-	char cl[32];
+	char cl[35];
     struct Command* command;
 	strcpy(cl, commandLine);
     toupperString(cl);
