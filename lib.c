@@ -359,7 +359,8 @@ void setBank(unsigned char bankPatternId)
 {
 	__asm
 		ld a, 4 (IX)
-		call #0xBD5B
+    ld bc, #0x7F00
+    OUT (c), a
 	__endasm;
 }
 
