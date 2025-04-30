@@ -1,10 +1,14 @@
 @echo off
+
 if "%~1"=="" (
     echo Veuillez spécifier la langue en paramètre : fr ou en
     exit /b 1
 ) else (
     echo Langue de compilation : %1
 )
+
+copy cat.dsk result.dsk
+catart.exe result.dsk 0 9 3 %1
 
 if "%~1"=="fr" (
     set language=1
@@ -25,6 +29,7 @@ if "%~1"=="fr" (
     copy title_en.scr title.scr
     copy DISC_EN.BAS DISC.BAS
 )
+
 set path=C:\Windows\System32;.\SDCC36\bin
 echo COMPILING TECHNICAL LIB ...
 sdasz80 -go crt0_cpc.s
@@ -53,7 +58,8 @@ hex2bin database.ihx
 hex2bin datatext.ihx
 hex2bin charset.ihx
 echo CPCDISK ...
-CPCDiskXP -File main.bin -AddAmsdosHeader 100 -AddToNewDsk result.dsk
+@REM CPCDiskXP -File main.bin -AddAmsdosHeader 100 -AddToNewDsk result.dsk
+CPCDiskXP -File main.bin -AddAmsdosHeader 100 -AddToExistingDsk result.dsk
 CPCDiskXP -File database.bin -AddAmsdosHeader 100 -AddToExistingDsk result.dsk
 CPCDiskXP -File datatext.bin -AddAmsdosHeader 100 -AddToExistingDsk result.dsk
 CPCDiskXP -File charset.bin -AddAmsdosHeader 100 -AddToExistingDsk result.dsk
