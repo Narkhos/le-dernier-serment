@@ -1,7 +1,7 @@
 @echo off
 
 if "%~1"=="" (
-    echo Veuillez spécifier la langue en paramètre : fr ou en
+    echo Veuillez spécifier la langue en paramètre : fr, en or sp
     exit /b 1
 ) else (
     echo Langue de compilation : %1
@@ -19,15 +19,19 @@ if "%~1"=="fr" (
 ) else (
     if "%~1"=="en" (
         set language=2
+        copy database_en.c database.c
+        copy compass_en.scr compass.scr
+        copy title_en.scr title.scr
+        copy DISC_EN.BAS DISC.BAS
     ) else (
-        echo Langue inconnue on passe en anglais
-        set language=2
+        if "%~1"=="sp" (
+            set language=3
+            copy database_sp.c database.c
+            copy compass_en.scr compass.scr
+            copy title_en.scr title.scr
+            copy DISC_SP.BAS DISC.BAS
+        )
     )
-
-    copy database_en.c database.c
-    copy compass_en.scr compass.scr
-    copy title_en.scr title.scr
-    copy DISC_EN.BAS DISC.BAS
 )
 
 set path=C:\Windows\System32;.\SDCC36\bin

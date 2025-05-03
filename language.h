@@ -9,4 +9,8 @@
         #include "language_en.h"
     #endif
 
+    #if LANGUAGE == 3 // Spanish
+        #include "language_sp.h"
+    #endif
+
 #endif
