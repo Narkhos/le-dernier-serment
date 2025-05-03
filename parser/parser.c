@@ -146,6 +146,50 @@ bool isInArray(char* s, const char** array, int len) {
 	};
 #endif
 
+#if LANGUAGE == 3 // Spanish
+	// liste des verbes et de leurs synonymes
+	const char* verbs[VERB_COUNT][6] = {
+		{"", "", "", "", "", ""}, // Empty
+		{"NORT", "N", "AVAN", "", "", ""}, // Nord
+		{"SUR", "S", "RETR", "VOLV", "", ""}, // Sud
+		{"ESTE", "E", "DERE", "", "", ""}, // Est
+		{"OEST", "O", "IZQU", "", "", ""}, // Ouest
+		{"SUBI","ESCA", "SUBE", "ARRI", "", ""}, // Monter
+		{"DESC", "BAJA", "ABAJ", "", "", ""}, // Descendre
+		{"MIRA", "EXAM", "VER", "X", "VE"}, // Regarder
+		{"HURG", "BUSC", "", "", ""}, // Fouiller
+		{"COGE", "TOMA", "LLEV", "ROBA", "", ""}, // Prendre
+		{"UTIL", "COMB", "ACTI", "GOLP", "UNIR", "UNE"}, // Utiliser
+		{"DEJA", "FIJA", "DEPO", "METE", "INSE", "ADJU"}, // Poser
+		{"TIRA", "", "", "", "", ""}, // Tirer
+		{"PULS", "APRE", "", "", "", ""}, // Pousser
+		{"GIRA", "", "", "", "", ""}, // Tourner
+		{"INVE", "I", "", "", "", ""}, // Inventaire
+		{"DORM", "REPO", "", "", "", ""}, // Dormir
+		{"COME", "DEVO", "BEBE", "TRAG", "ZAMP", ""}, // Manger
+		{"ENTR", "PASA", "ATRA", "", "", ""}, // Aller
+		{"SALIR", "VOLA", "HUIR", "HUYE", "", ""}, // Sortir
+		{"ABRI", "ABRE", "", "", "", ""}, // Ouvrir
+		{"CERR", "CIER", "", "", "", ""}, // Fermer
+		{"LEER", "LEE", "", "", "", ""}, // Lire
+		{"HABL", "DECI", "LLAM", "DI", "PREG", "INTE"}, // Parler
+		{"AYUD", "SOCO", "", "", "", ""}, // Aide
+		{"ESPE", "", "", "", "", ""}, // Attendre
+		{"MEZC", "REMO", "", "", "", ""}, // Melanger
+		{"JUGA", "TOCA", "JUEG", "", "", ""}, // Jouer
+		{"SALA", "", "", "", "", ""}, // Saler
+		{"PIME", "", "", "", "", ""}, // Poivrer
+		{"RELL", "LLEN", "", "", "", ""}, // Remplir
+		{"VACI", "VERT", "", "", "", ""}, // Vider
+		{"DESB", "", "", "", "", ""}, // Deverrouiller
+		{"BLOQ", "", "", "", "", ""}, // Verrouiller
+		{"ENCE", "ENCI", "", "", "", ""}, // Allumer
+		{"APAG", "", "", "", "", ""}, // Eteindre
+		{"GRAB", "SAVE", "", "", "", ""}, // Sauver
+		{"CARG", "LOAD", "", "", "", ""} // Charger
+	};
+#endif
+
 // liste des réponses type pour chaque verbe
 const char* responses[VERB_COUNT] = {
 	_T0079, // Empty
@@ -203,6 +247,13 @@ const int noiseWordsLen = 36;
 const char* noiseWords[] = { "", "OF", "FROM", "THE", "WITH", "IN", "ON", "ALL", "EVERY", "AND", "A", "ONE", "TO", "MY","HIS", "YOUR", "FOR", "BY", "DO", "DOING", "DONE", "GO" };
 // Longueur de la liste des mots inutils
 const int noiseWordsLen = 22;
+#endif
+
+#if LANGUAGE == 3 // Spanish
+// Mots inutils à ignorer lors du parsing en français
+const char* noiseWords[] = { "", "DE", "EL", "LA", "LOS", "LAS", "A", "LO", "CON", "EN", "POR", "TODO", "TODOS", "Y", "O", "UN", "UNA", "AL", "DEL", "UNOS", "UNAS", "MI", "MIS", "SU", "SUS", "TU", "TUS", "PARA", "YO" };
+// Longueur de la liste des mots inutils
+const int noiseWordsLen = 29;
 #endif
 
 // Récupère l'index du verbe. O si non trouvé.

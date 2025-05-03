@@ -516,6 +516,9 @@ void printu(char* text) {
       #if LANGUAGE == 2 // English
         printf("%c ", text[i]);
       #endif
+      #if LANGUAGE == 3 // Spanish
+        printf("%c ", text[i]);
+      #endif
     } else {
 		  printf("%c", convertUnicode(text + i, &ignoreNext));
     }
