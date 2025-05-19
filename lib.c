@@ -460,6 +460,15 @@ void SaveFile(char *sFileName, char *pLoadAddress, unsigned int dataLength) {
 unsigned char convertUnicode(unsigned char* c, char* ignoreNext) {
 	*ignoreNext = 1;
 	switch(c[0]) {
+    case 0xC2:
+      switch(c[1]) {
+        case 0xA1: // ¡
+          return 0x87;
+        case 0xBF: // ¿
+          return 0x88;
+        default:
+          return c[1];
+      }
 		case 0xC3:
 			switch(c[1]) {
 				case 0xA0: // à
@@ -480,6 +489,16 @@ unsigned char convertUnicode(unsigned char* c, char* ignoreNext) {
 					return 0x5C;
         case 0x87: // Ç
           return 0x81;
+        case 0xA1: // á
+          return 0x82;
+        case 0xAD: // í
+          return 0x83;
+        case 0xB3: // ó
+          return 0x84;
+        case 0xBA: // ú
+          return 0x85;
+        case 0xB1: // ñ
+          return 0x86;
 				default:
 					return c[1];
 			}
