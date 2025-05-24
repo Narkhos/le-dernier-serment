@@ -5,7 +5,7 @@
 struct Object objectDatabase[MAX_OBJECT_COUNT] = {
     // Système
     { // NO_OBJECT
-        {"EMPTY"},
+        {"NADA"},
         "nada",
         NO_OBJECT,
         NO_OBJECT,
@@ -13,7 +13,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         0
     },
     { // CONTEXT
-        {"CONTEXT"},
+        {"CONTEXTO"},
         "contexto",
         CONTEXT,
         NO_OBJECT,
@@ -23,7 +23,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
     // Protagoniste
     { // HERO
         // Liste des mots pouvant désigner le joueur en tant qu'objet d'une commande (avant ou après le verbe)
-        {"ME", "SE", "M", "SOI", "MOI"},
+        {"ME","SE","TE","MI","YO"},
         "tú",
         HERO,
         CONTEXT,
@@ -31,7 +31,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         0
     },
     { // INVENTORY
-        {"SAC"},
+        {"BOLSA","MOCHILA"},
         "tu bolsa",
         INVENTORY,
         CONTEXT,
@@ -40,7 +40,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
     },
     // Personnages
     { // HERMIT
-        {"MOINE", "HOMME", "POCHE", "HERMES"},
+        {"MONJE","HOMBRE","FRAILE","HERMES"},
         "el monje",
         HERMIT,
         M_HUT_INDOOR,
@@ -48,7 +48,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         0b00000000
     },
     { // NAHASH
-        {"NAHASH", "ANGE"},
+        {"NAHASH","ANGEL"},
         "Nahash",
         NAHASH,
         NO_OBJECT,
@@ -56,8 +56,8 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         0
     },
     { // GOD
-        {"CREATEUR","SPHERE","DIEU", "BOULE"},
-        "le creador",
+        {"CREADOR","ESFERA","DIOS","BOLA"},
+        "el creador",
         GOD,
         GOD_ROOM,
         "El dios creador",
@@ -65,23 +65,23 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
     },
     // Objets
     { // FLUTE (BAS-RELIEF)
-        {"FLUTE"},
+        {"FLAUTA"},
         "la flauta",
         FLUTE,
         BASRELIEF,
-        "La flauta y el músico están esculpidos de una sola pieza",
+        "La flauta y el músico están esculpidos  de una sola pieza",
         0
     },
     { // FLUTE (BAS-RELIEF)
-        {"FLUTE"},
+        {"FLAUTA"},
         "la flauta",
         M_FLUTE,
         M_BASRELIEF,
-        "La flauta y el músico están esculpidos de una sola pieza",
+        "La flauta y el músico están esculpidos  de una sola pieza",
         0
     },
     { // STOVE
-        {"POELE", "FOUR", "FEU"},
+        {"COCINA","HORNO","FUEGO"},
         "la cocina",
         STOVE,
         LABORATORY,
@@ -89,7 +89,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         0
     },
     { // M_BUTTON
-        {"BOUTON", "LEVIER"},
+        {"MANDO","PALANCA"},
         "la palanca",
         M_BUTTON,
         M_LABORATORY,
@@ -97,7 +97,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         0
     },
     { // IVY
-        {"LIERRE"},
+        {"HIEDRA","ENREDADERA"},
         "la hiedra",
         IVY,
         CAVERN_OUTDOOR,
@@ -105,23 +105,23 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         0
     },
     { // LADDER
-        {"ECHELLE"},
-        "la escala",
+        {"ESCALERA"},
+        "la escalera",
         LADDER,
         M_FOREST,
-        "La escala desaparece entre el follaje de los árboles",
+        "La escalera desaparece entre el follaje de los árboles",
         0
     },
     { // TOWER
-        {"TOUR","RUINE","CHATEAU"},
+        {"TORRE","RUINAS","CASTILLO"},
         "la torre",
         TOWER,
         CAVERN_OUTDOOR,
-        "Una torre en ruinas invadida por la hiedra",
+        "Una torre en ruinas invadida por la     hiedra",
         0
     },
     { // M_TOWER
-        {"TOUR","RUINE","CHATEAU"},
+        {"TORRE","RUINAS","CASTILLO"},
         "la torre",
         M_TOWER,
         M_CAVERN_OUTDOOR,
@@ -129,39 +129,39 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         0
     },
     { // HUT
-        {"CABANE","MAISON","CHALET"},
-        "la cabaña",
+        {"CHOZA","CASITA","CASA"},
+        "la casita",
         HUT,
         HUT_OUTDOOR,
-        "Una cabaña es los árboles",
+        "Una casita en los árboles",
         0
     },
     { // M_HUT
-        {"CABANE","MAISON","CHALET"},
-        "la cabaña",
+        {"CHOZA","CASITA","CASA"},
+        "la casita",
         M_HUT,
         M_HUT_OUTDOOR,
-        "Una cabaña es los árboles",
+        "Una casita en los árboles",
         0
     },
     { // BASRELIEF
-        {"BAS-RELIEF", "BASRELIEF"},
-        "le bas-relief",
+        {"GRABADO"},
+        "el grabado",
         BASRELIEF,
         SECRET_ROOM,
         "Un bajorrelieve que muestra un músico",
         0b00001000
     },
     { // M_BASRELIEF
-        {"BAS-RELIEF", "BASRELIEF"},
-        "el bajorrelieve",
+        {"GRABADO"},
+        "el grabado",
         M_BASRELIEF,
         M_SECRET_ROOM,
         "Un bajorrelieve que muestra un músico",
         0b00001000
     },
     { // BUSH
-        {"BUISSON","PLANTE","ARBRE","BUISSONS"},
+        {"ARBUSTO","PLANTA","ARBOL","ARBUSTOS"},
         "el arbusto",
         BUSH,
         CAVERN_OUTDOOR,
@@ -169,7 +169,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         0b00001000
     },
     { // AMULET
-        {"AMULETTE","BIJOU", "PENDANTIF", "TALISMAN"},
+        {"AMULETO","JOYA","COLGANTE","TALISMAN"},
         "el amuleto",
         AMULET,
         HERMIT,
@@ -177,15 +177,15 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         4 // 0b00000100
     },
     { // BERRY
-        {"BAIES","FRUITS","BAIE"},
+        {"BAYAS","FRUTOS","FRUTAS","BAYA"},
         "las bayas",
         BERRY,
         BUSH,
-        "De bayas rojas",
+        "Unas bayas rojas",
         4 // 0b00000100
     },
     { // TRAPPE
-        {"TRAPPE","ESCALIER"},
+        {"TRAMPILLA","ESCALERA","ESCALERAS"},
         "la trampilla",
         TRAPPE,
         CHURCH_INDOOR,
@@ -193,7 +193,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         1 // 0b00000001, MASK_CLOSED
     },
     { // M_TRAPPE
-        {"TRAPPE","ESCALIER"},
+        {"TRAMPILLA","ESCALERA","ESCALERAS"},
         "la trampilla",
         M_TRAPPE,
         M_CHURCH_INDOOR,
@@ -201,15 +201,15 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         0
     },
     { // BUTTON
-        {"BOUTON", "LEVIER"},
-        "el botón",
+        {"MANDO","PALANCA"},
+        "el mando",
         BUTTON,
         LABORATORY,
         "Una pequeña palanca",
         1 // 0b00000001, MASK_CLOSED
     },
     { // BOOK
-        {"LIVRE", "GRIMOIRE", "BOUQUIN"},
+        {"LIBRO","GRIMORIO"},
         "el grimorio",
         BOOK,
         LABORATORY,
@@ -217,71 +217,71 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         4 // 0b00000100
     },
     { // MINT
-        {"MENTHE", "MENTE"},
+        {"MENTA"},
         "la menta",
         MINT,
         HERMIT,
-        "De la menta",
+        "Hojas de menta",
         4 // 0b00000100
     },
     { // TIBIA
         {"TIBIA"},
-        "le tibia",
+        "la tibia",
         TIBIA,
         BONES,
-        "Parace una cuchara",
+        "Parece una cuchara",
         4 // 0b00000100
     },
     { // FLASK
-        {"FIOLE", "FLASQUE", "POTION"},
-        "un matraza",
+        {"MATRAZ","PROBETA","POCION","POCIMA"},
+        "el matraz",
         FLASK,
         BONES,
         "Un pequeño matraz",
         4 // 0b00000100
     },
     { // MUSHROOMS
-        {"AMANITES", "AMANITE", "CHAMPIGNON"},
+        {"AMANITAS","AMANITA","SETAS","SETA"},
         "las amanitas",
         MUSHROOMS,
         M_CAULDRON,
-        "De pequeños champiñones blancos",
+        "Pequeñas setas blancas",
         4 // 0b00000100
     },
     { // BONES
-        {"SQUELETTE","OS","OSSEMENTS","CRANE"},
+        {"ESQUELETO","HUESOS","CALAVERA"},
         "el esqueleto",
         BONES,
         MIRROR_ROOM,
-        "De huesos humanos",
+        "Huesos humanos",
         0b00001000
     },
     { // SALT
-        {"SEL", "SALIERE"},
+        {"SAL","SALERO"},
         "la sal",
         SALT,
         BONES,
-        "De sal",
+        "Un puñado de sal",
         4
     },
     { // PEPPER
-        {"POIVRE"},
+        {"PIMIENTA"},
         "la pimienta",
         PEPPER,
         BONES,
-        "De pimienta",
+        "Un puñado de pimienta",
         4
     },
     { // ARTEFACT
-        {"SCEPTRE", "BATON", "SEPTRE", "FLUTE"},
+        {"CETRO","BASTON","FLAUTA"},
         "el cetro",
         ARTEFACT,
         CHEST,
-        "Un bastón lleno de agujeros y una esfera en un extremo",
+        "Un bastón lleno de agujeros y una esferaen un extremo",
         0b00000100
     },
     { // GONG
-        {"GONG","CYMBALE","DISQUE"},
+        {"GONG","DISCO"},
         "el gong",
         GONG,
         M_CHURCH_INDOOR,
@@ -289,7 +289,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         0
     },
     { // CAULDRON
-        {"CHAUDRON", "MARMITE", "SUBSTRAT","EAU"},
+        {"CALDERO","POCIMA","OLLA","AGUA"},
         "el caldero",
         CAULDRON,
         LABORATORY,
@@ -297,7 +297,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         0
     },
     { // M_CAULDRON
-        {"CHAUDRON", "MARMITE"},
+        {"CALDERO","POCIMA","OLLA","AGUA"},
         "el caldero",
         M_CAULDRON,
         M_LABORATORY,
@@ -305,23 +305,23 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         0
     },
     { // STATUETTE
-        {"STATUETTE","STATUE","TROU","SOCLE"},
-        "la estatua",
+        {"ESTATUILLA","ESTATUA","ORIFICIO","PEDESTAL"},
+        "la estatuilla",
         STATUETTE,
         CRYPT,
-        "Una estatua unida a una base perforada con un pequeño orificio",
+        "Una estatua alada sobre un pedestal con un pequeño orificio",
         128 // 0b10000000 // MASK_CUSTOM_STATE
     },
     { // M_STATUETTE
-        {"STATUETTE","STATUE","TROU","SOCLE"},
-        "la estatua",
+        {"ESTATUILLA","ESTATUA","ORIFICIO","PEDESTAL"},
+        "la estatuilla",
         M_STATUETTE,
         M_CRYPT,
-        "Una estatua unida a una base perforada con un pequeño orificio",
+        "Una estatua alada sobre un pedestal con un pequeño orificio",
         0
     },
     { // WHISTLE
-        {"SIFFLET"},
+        {"SILBATO","PITO"},
         "el silbato",
         WHISTLE,
         BASRELIEF,
@@ -329,7 +329,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         4 // 0b00000100
     },
     { // PARTITION
-        {"PARTITION", "PAPIER", "FEUILLE"},
+        {"PARTITURA","PAPEL"},
         "la partitura",
         PARTITION,
         M_BASRELIEF,
@@ -337,7 +337,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         4 // 0b00000100
     },
     { // DOOR
-        {"PORTE"},
+        {"PUERTA"},
         "la puerta",
         DOOR,
         CRYPT,
@@ -345,7 +345,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         1 // 0b00000001, MASK_CLOSED
     },
     { // M_DOOR
-        {"PORTE"},
+        {"PUERTA"},
         "la puerta",
         M_DOOR,
         M_CRYPT,
@@ -353,7 +353,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         1 // 0b00000001, MASK_CLOSED
     },
     { // CHURCH
-        {"CHAPELLE", "RUINE", "EGLISE"},
+        {"CAPILLA","RUINAS","IGLESIA"},
         "la capilla",
         CHURCH,
         CHURCH_OUTDOOR,
@@ -361,7 +361,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         0
     },
     { // CHEST
-        {"COFFRE", "BOITE"},
+        {"COFRE","CAJA"},
         "el cofre",
         CHEST,
         CAVERN_INDOOR,
@@ -369,7 +369,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         0b01001011
     },
     { // M_CHEST
-        {"COFFRE", "BOITE"},
+        {"COFRE","CAJA"},
         "el cofre",
         M_CHEST,
         M_CAVERN_INDOOR,
@@ -377,7 +377,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         0b01001011
     },
     { // KEY
-        {"CLEF", "CLE"},
+        {"LLAVE"},
         "la llave",
         KEY,
         HERMIT,
@@ -385,27 +385,27 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         4 // 0b00000100
     },
     { // FIREBRAND
-        {"TISONNIER", "PIQUE"},
+        {"ATIZADOR","BARRA"},
         "el atizador",
         FIREBRAND,
         M_CHEST,
-        "Una delgada barra metállica puntiaguda",
+        "Una delgada barra metálica puntiaguda",
         4 // 0b00000100
     },
     { // MIRROR
-        {"MIROIR", "GLACE", "REFLET", "MIRROIR"},
+        {"ESPEJO","REFLEJO"},
         "el espejo",
         MIRROR,
         MIRROR_ROOM,
-        "Un gran espejo",
+        "Un espejo grande",
         0
     },
     { // M_MIRROR
-        {"MIROIR", "GLACE", "REFLET", "MIRROIR"},
+        {"ESPEJO","REFLEJO"},
         "el espejo",
         M_MIRROR,
         M_MIRROR_ROOM,
-        "Un gran espejo",
+        "Un espejo grande",
         0
     },
     // Simulation locations
@@ -422,7 +422,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         N_ROOM,
         NO_OBJECT,
-        "HABLAR al guardián",
+        "HABLA con el guardián",
         0
     },
     { // NE_ROOM
@@ -471,7 +471,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         S_ROOM,
         NO_OBJECT,
-        "Teclea NORTE,SUR,ESTE u OESTE para desplazarte",
+        "Teclea NORTE,SUR,ESTE u OESTE para    desplazarte",
         0
     },
     { // SE_ROOM
@@ -484,7 +484,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
     },
     // Simulation objects
     { // SIM_CLUB
-        {"MASSUE", "MASSE"},
+        {"MAZA","ARMA"},
         "la maza",
         SIM_CLUB,
         SIM_CHEST,
@@ -492,23 +492,23 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         4
     },
     { // SIM_GUARD
-        {"GARDE", "SOLDAT", "HOMME"},
+        {"GUARDIAN","SOLDADO","HOMBRE"},
         "el guardián",
         SIM_GUARD,
         N_ROOM,
-        "No parece cómodo",
+        "Parece incómodo",
         0
     },
     { // SIM_CHEST
-        {"COFFRE","BOITE","MALLE"},
+        {"COFRE","CAJA"},
         "el cofre",
         SIM_CHEST,
         NW_ROOM,
-        "Un gran cofre",
+        "Un cofre grande",
         0b01001011
     },
     { // SIM_KEY
-        {"CLE", "CLEF"},
+        {"LLAVE",},
         "la llave",
         SIM_KEY,
         NE_ROOM,
@@ -516,7 +516,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         4 // 0b00000100
     },
     { // SIM_DOOR
-        {"PORTE"},
+        {"PUERTA"},
         "la puerta",
         SIM_DOOR,
         E_ROOM,
@@ -529,7 +529,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         GOD_ROOM,
         NO_OBJECT,
-        "Una gran esfera flota en medio de un extraño paisaje",
+        "Una gran esfera flota en medio de un    extraño paisaje",
         0
     },
     { // FOREST
@@ -537,7 +537,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         FOREST,
         NO_OBJECT,
-        "Árboles y más árboles",
+        "Arboles y más árboles",
         0
     },
     { // M_FOREST
@@ -545,7 +545,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         M_FOREST,
         NO_OBJECT,
-        "Árboles y más árboles. Y una  escalera!",
+        "Arboles y más árboles.¡Y una escalera!",
         0
     },
     { // CHURCH_OUTDOOR
@@ -553,7 +553,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         CHURCH_OUTDOOR,
         NO_OBJECT,
-        "Un claro. En lo alto de una colina, una capilla abandonada",
+        "Un claro.En lo alto de una colina,una capilla abandonada",
         0
     },
     { // M_CHURCH_OUTDOOR
@@ -561,7 +561,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         M_CHURCH_OUTDOOR,
         NO_OBJECT,
-        "Un claro. En lo alto de una colina, una capilla abandonada",
+        "Un claro.En lo alto de una colina,una capilla abandonada",
         0
     },
     { // CHURCH_INDOOR
@@ -577,7 +577,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         M_CHURCH_INDOOR,
         NO_OBJECT,
-        "Un gong imponente se yergue en el centro de la habitación",
+        "Un imponente gong se yergue en el centrode la habitación",
         0
     },
     { // CRYPT
@@ -585,7 +585,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         CRYPT,
         NO_OBJECT,
-        "La cripta. Una pequeña estatua ocupa un nicho en el muro",
+        "La cripta.Una pequeña estatuilla ocupa un nicho en el muro",
         0
     },
     { // M_CRYPT
@@ -593,7 +593,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         M_CRYPT,
         NO_OBJECT,
-        "La cripta. Una pequeña estatua ocupa un nicho en el muro",
+        "La cripta.Una pequeña estatuilla ocupa un nicho en el muro",
         0
     },
     { // LABORATORY
@@ -601,7 +601,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         LABORATORY,
         NO_OBJECT,
-        "Sobre la cocina, un caldero lleno de agua",
+        "Sobre la cocina,un caldero lleno       de agua",
         0
     },
     { // M_LABORATORY
@@ -609,7 +609,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         M_LABORATORY,
         NO_OBJECT,
-        "Olor a óxido y humedad",
+        "Huele a moho y humedad",
         0
     },
     { // MIRROR_ROOM
@@ -641,7 +641,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         M_HUT_OUTDOOR,
         NO_OBJECT,
-        "Una cabaña en la copa de los árboles",
+        "Una casita en la copa de los árboles",
         0
     },
     { // HUT_INDOOR
@@ -665,7 +665,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         CAVERN_OUTDOOR,
         NO_OBJECT,
-        "Una torre en ruinas invadida por la vegetación",
+        "Una torre en ruinas invadida por la     vegetación",
         0
     },
     { // M_CAVERN_OUTDOOR
@@ -681,7 +681,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         CAVERN_INDOOR,
         NO_OBJECT,
-        "Un gran cofre ocupa una buena parte de la cueva",
+        "Un enorme cofre ocupa una buena parte dela sala",
         0
     },
     { // M_CAVERN_INDOOR
@@ -689,7 +689,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         M_CAVERN_INDOOR,
         NO_OBJECT,
-        "Un gran cofre ocupa una buena parte de la cueva",
+        "Un enorme cofre ocupa una buena parte dela sala",
         0
     },
     { // SECRET_ROOM
@@ -697,7 +697,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         SECRET_ROOM,
         NO_OBJECT,
-        "Una habitación dorada. Un muro está cubierta por un bajorrelieve",
+        "Una cámara dorada.Un muro está cubiertopor un grabado",
         0
     },
     { // M_SECRET_ROOM
@@ -705,7 +705,7 @@ struct Object objectDatabase[MAX_OBJECT_COUNT] = {
         "",
         M_SECRET_ROOM,
         NO_OBJECT,
-        "Una habitación dorada. Un muro está cubierta por un bajorrelieve",
+        "Una cámara dorada.Un muro está cubiertopor un grabado",
         0
     }
 };

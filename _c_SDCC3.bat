@@ -27,8 +27,8 @@ if "%~1"=="fr" (
         if "%~1"=="sp" (
             set language=3
             copy database_sp.c database.c
-            copy compass_en.scr compass.scr
-            copy title_en.scr title.scr
+            copy compass_fr.scr compass.scr
+            copy title_sp.scr title.scr
             copy DISC_SP.BAS DISC.BAS
         )
     )

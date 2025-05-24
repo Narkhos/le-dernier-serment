@@ -261,7 +261,7 @@ bool executeCommand(char* commandLine) {
 		}
 
 		if (heroStatus == SICK) {
-			printMessage("BURP!", NULL, 0);
+			printMessage("¡BURP!", NULL, 0);
 		}
 	}
 

@@ -154,29 +154,29 @@ bool isInArray(char* s, const char** array, int len) {
 		{"SUR", "S", "RETR", "VOLV", "", ""}, // Sud
 		{"ESTE", "E", "DERE", "", "", ""}, // Est
 		{"OEST", "O", "IZQU", "", "", ""}, // Ouest
-		{"SUBI","ESCA", "SUBE", "ARRI", "", ""}, // Monter
+		{"SUBI","ESCA", "SUBE", "ARRI", "TREP", ""}, // Monter
 		{"DESC", "BAJA", "ABAJ", "", "", ""}, // Descendre
-		{"MIRA", "EXAM", "VER", "X", "VE"}, // Regarder
-		{"HURG", "BUSC", "", "", ""}, // Fouiller
+		{"MIRA", "EXAM", "VER", "X", "EX", "VE"}, // Regarder
+		{"HURG", "BUSC", "INVES", "ESCR", ""}, // Fouiller
 		{"COGE", "TOMA", "LLEV", "ROBA", "", ""}, // Prendre
-		{"UTIL", "COMB", "ACTI", "GOLP", "UNIR", "UNE"}, // Utiliser
-		{"DEJA", "FIJA", "DEPO", "METE", "INSE", "ADJU"}, // Poser
-		{"TIRA", "", "", "", "", ""}, // Tirer
-		{"PULS", "APRE", "", "", "", ""}, // Pousser
-		{"GIRA", "", "", "", "", ""}, // Tourner
+		{"UTIL", "USA", "USAR", "GOLP", "UNIR", "UNE"}, // Utiliser
+		{"DEJA", "FIJA", "ECHA", "METE", "PON", "PONE"}, // Poser
+		{"TIRA", "ESTI", "", "", "", ""}, // Tirer
+		{"PULS", "APRE", "EMPU", "ATRA", "", ""}, // Pousser
+		{"GIRA", "MOVE", "MUEV", "", "", ""}, // Tourner
 		{"INVE", "I", "", "", "", ""}, // Inventaire
-		{"DORM", "REPO", "", "", "", ""}, // Dormir
-		{"COME", "DEVO", "BEBE", "TRAG", "ZAMP", ""}, // Manger
-		{"ENTR", "PASA", "ATRA", "", "", ""}, // Aller
-		{"SALIR", "VOLA", "HUIR", "HUYE", "", ""}, // Sortir
+		{"DORM", "", "", "", "", ""}, // Dormir
+		{"COME", "BEBE", "TRAG", "", "", ""}, // Manger
+		{"ENTR", "PASA", "", "", "", ""}, // Aller
+		{"SALI", "HUYE", "HUIR", "", "", ""}, // Sortir
 		{"ABRI", "ABRE", "", "", "", ""}, // Ouvrir
 		{"CERR", "CIER", "", "", "", ""}, // Fermer
 		{"LEER", "LEE", "", "", "", ""}, // Lire
-		{"HABL", "DECI", "LLAM", "DI", "PREG", "INTE"}, // Parler
+		{"HABL", "DECI", "LLAM", "DI", "PREG", "CLAM"}, // Parler
 		{"AYUD", "SOCO", "", "", "", ""}, // Aide
 		{"ESPE", "", "", "", "", ""}, // Attendre
-		{"MEZC", "REMO", "", "", "", ""}, // Melanger
-		{"JUGA", "TOCA", "JUEG", "", "", ""}, // Jouer
+		{"MEZC", "REMO", "REMU", "", "", ""}, // Melanger
+		{"SOPL", "TOCA", "REPR", "", "", ""}, // Jouer
 		{"SALA", "", "", "", "", ""}, // Saler
 		{"PIME", "", "", "", "", ""}, // Poivrer
 		{"RELL", "LLEN", "", "", "", ""}, // Remplir
@@ -185,7 +185,7 @@ bool isInArray(char* s, const char** array, int len) {
 		{"BLOQ", "", "", "", "", ""}, // Verrouiller
 		{"ENCE", "ENCI", "", "", "", ""}, // Allumer
 		{"APAG", "", "", "", "", ""}, // Eteindre
-		{"GRAB", "SAVE", "", "", "", ""}, // Sauver
+		{"GRAB", "SAVE", "GUAR", "", "", ""}, // Sauver
 		{"CARG", "LOAD", "", "", "", ""} // Charger
 	};
 #endif
@@ -251,9 +251,9 @@ const int noiseWordsLen = 22;
 
 #if LANGUAGE == 3 // Spanish
 // Mots inutils à ignorer lors du parsing en français
-const char* noiseWords[] = { "", "DE", "EL", "LA", "LOS", "LAS", "A", "LO", "CON", "EN", "POR", "TODO", "TODOS", "Y", "O", "UN", "UNA", "AL", "DEL", "UNOS", "UNAS", "MI", "MIS", "SU", "SUS", "TU", "TUS", "PARA", "YO" };
+const char* noiseWords[] = { "", "DE", "EL", "LA", "LOS", "LAS", "A", "LO", "CON", "EN", "POR", "TODO", "TODOS", "Y", "UN", "UNA", "AL", "DEL", "UNOS", "UNAS", "MIS", "SU", "SUS", "TU", "TUS", "PARA" };
 // Longueur de la liste des mots inutils
-const int noiseWordsLen = 29;
+const int noiseWordsLen = 26;
 #endif
 
 // Récupère l'index du verbe. O si non trouvé.

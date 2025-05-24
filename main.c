@@ -126,12 +126,12 @@ void game() {
 	printf("OATH");
 #endif
 #if LANGUAGE == 3 // Spanish
-	setCursor(3,4);
-	printf("THE");
-	setCursor(3,6);
-	printf("LAST");
-	setCursor(3,8);
-	printf("OATH");
+	setCursor(4,4);
+	printf("EL");
+	setCursor(2,6);
+	printf("ULTIMO");
+	setCursor(1,8);
+	printf("JURAMENTO");
 #endif
 
 	setCursor(9,11);
