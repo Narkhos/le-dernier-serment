@@ -272,7 +272,7 @@ int getVerbId(char* verb) {
 				return i; // verb found
 			}
 			j++;
-		} while( j < 5  && strcmp(verbs[i][j], ""));
+		} while( j < 6  && strcmp(verbs[i][j], ""));
 	}
 	
 	return 0; // verb not found
